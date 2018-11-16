@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "517191616628",
+    "firebase_url": "https://precisometrolgiaapp.firebaseio.com",
+    "project_id": "precisometrolgiaapp",
+    "storage_bucket": "precisometrolgiaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517191616628:android:325410d962aefc1e",
+        "android_client_info": {
+          "package_name": "com.precisometrologia.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517191616628-67hj43l4i4pcms1d8jaftvuvjte199ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkmCbozytAYoRj4a7NVmFG__GXWtS8Gjw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
