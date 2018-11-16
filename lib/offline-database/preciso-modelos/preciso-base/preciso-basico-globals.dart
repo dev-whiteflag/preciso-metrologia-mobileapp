@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 var selectedModel;
 var selectionGrandeza = '1';
+var selectedGrandeza;
 
 // TextControllers
 

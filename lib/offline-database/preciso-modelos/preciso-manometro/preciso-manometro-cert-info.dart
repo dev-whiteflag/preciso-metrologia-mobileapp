@@ -27,16 +27,20 @@ class PrecisoManometroCertInfoState extends State<PrecisoManometroCertInfo> {
   fetchGrandeza(){
     switch (selectionGrandeza){
       case '1':
-        return "cmHg";
+        selectedGrandeza = "cmHg";
+        return selectedGrandeza;
       break;
       case '2':
-        return "mmHg";
+        selectedGrandeza = "mmHg";
+        return selectedGrandeza;
       break;
       case '3':
-        return "hPa";
+        selectedGrandeza = "hPa";
+        return selectedGrandeza;
       break;
       case '4':
-        return "MPa";
+        selectedGrandeza = "MPa";
+        return selectedGrandeza;
       break;
     }
   }
