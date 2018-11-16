@@ -1,8 +1,7 @@
-# precisometrologia_app
+# Preciso Metrologia's Mobile App
 
-A new Flutter project.
+A Project using flutter for building a mobile app, for creating certificates.
 
-## Getting Started
+## Team Members
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+* Brenno Fagundes as Head Programmer and UX/UI Designer.
