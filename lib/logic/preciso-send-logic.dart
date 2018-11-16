@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
+import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-padroes.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-raw-data.dart';
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
@@ -178,13 +179,20 @@ Future<Null> sendFirebaseData(var selectedModel) async {
       {exportRawData3 = dataRaw3;}
       else {exportRawData3 = dataRaw1;}
 
+      var certID = await getIDCertificado();
+
+      Map<String, dynamic> dataHeader = {
+        'ID':                certID,
+        'PrecisoID':         getPrecisoID(),
+        'Mês':               nowMonth,
+        'Ano':               nowYear,
+        'Incremental':       savedIncremental,
+        };
 
       Map<String, dynamic> finalDataMap = {}..addAll(dataGeneral)..addAll(exportInstrumentoData)..addAll(dataInstrumento)
                                           ..addAll(dataRaw1)..addAll(exportRawData2)..addAll(exportRawData3)..addAll(dataPadrao)
-                                          ..addAll(dataAdicional);
+                                          ..addAll(dataAdicional)..addAll(dataHeader);
 
-      var certID = await getIDCertificado();
-                                        
       await Firestore.instance
       .collection('preciso-certificados')
       .document((certID.toString()))

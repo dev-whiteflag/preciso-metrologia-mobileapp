@@ -9,5 +9,7 @@ var precisoID;
 var certIncremental = 0;
 var certIncrementalConverted = "";
 var certIncrementalConvertedMinus = "";
-
+var nowYear;
+var nowMonth;
+var savedIncremental;
 

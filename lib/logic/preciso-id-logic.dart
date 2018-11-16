@@ -13,7 +13,9 @@ Future<String> getIDCertificado() async {
   var dateTime = new DateTime.now();
   var dateTimeDay = DateFormat("dd").format(dateTime);
   var dateTimeMonth = new DateFormat("MM").format(dateTime);
+  nowMonth = dateTimeMonth;
   var dateTimeYear = new DateFormat("yyyy").format(dateTime);
+  nowYear = dateTimeYear;
   var certTimestamp = dateTimeYear.toString() + dateTimeMonth.toString() + dateTimeDay.toString();
   var certificadoIDIncompleto = certTimestamp + getPrecisoID();
 
@@ -35,6 +37,7 @@ Future<String> getIDCertificado() async {
   var certificadoIDs = certificadoIDIncompleto + prefs.getString('certIncrementalS');
 
   certificadoIDFormController.text = certificadoIDs;
+  savedIncremental = prefs.getString('certIncremental');
 
   print(certificadoID);
   return certificadoID;
