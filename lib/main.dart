@@ -5,7 +5,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 // ------------------------------------------------------------------------ //
 import 'package:precisometrologia_app/preciso-login/preciso-login-logic.dart';
-import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 // ------------------------------------------------------------------------ //
 
 //---------------------------------------------------------------------------------//
@@ -35,7 +34,10 @@ class PrecisoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Preciso Metrologia",
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          primaryColor: Colors.lightBlue[400],
+          accentColor: Colors.deepPurple[400],),
         //home: LoginScreen()
         home: Scaffold(
           body: handleCurrentScreen()),);

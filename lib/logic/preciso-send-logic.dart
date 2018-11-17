@@ -187,6 +187,8 @@ Future<Null> sendFirebaseData(var selectedModel) async {
         'Mês':               nowMonth,
         'Ano':               nowYear,
         'Incremental':       savedIncremental,
+        'isUsingRawData2':   isSecondReadingEnabled.toString(),
+        'isUsingRawData3':   isThirdReadingEnabled.toString(),
         };
 
       Map<String, dynamic> finalDataMap = {}..addAll(dataGeneral)..addAll(exportInstrumentoData)..addAll(dataInstrumento)

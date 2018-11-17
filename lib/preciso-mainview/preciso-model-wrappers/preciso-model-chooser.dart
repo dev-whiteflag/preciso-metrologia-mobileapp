@@ -1,6 +1,5 @@
 // ------------------------------------------------------------------------- //
 import 'package:flutter/material.dart';
-import 'package:precisometrologia_app/varlists/globalslib.dart';
 // ------------------------------------------------------------------------ //
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';

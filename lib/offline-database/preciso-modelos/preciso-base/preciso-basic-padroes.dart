@@ -1,7 +1,5 @@
 // ------------------------------------------------------------------------- //
 import 'package:flutter/material.dart';
-import 'package:precisometrologia_app/varlists/globalslib.dart';
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 // ------------------------------------------------------------------------ //
 var selectionPadrao;
 var selectedPadrao;
