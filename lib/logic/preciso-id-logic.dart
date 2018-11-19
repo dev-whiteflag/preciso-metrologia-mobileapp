@@ -21,17 +21,16 @@ Future<String> getIDCertificado() async {
 
   if (prefs.getString('lastDay') != dateTimeDay){certIncremental = 0;}
   else {certIncremental = certIncremental;}
-
   if (certIncremental >= 0 && certIncremental < 10){certIncrementalConverted = '00' + (certIncremental).toString();}
   if (certIncremental >= 10 && certIncremental < 100){certIncrementalConverted = '0' + (certIncremental).toString();}
   if (certIncremental >= 100){certIncrementalConverted = (certIncremental).toString();}
   prefs.setString('certIncremental', certIncrementalConverted);
-  prefs.setString('certIncrementalS', certIncrementalConvertedMinus);
   prefs.setString('lastDay', dateTimeDay);
 
   if (certIncremental+1 >= 0){certIncrementalConvertedMinus = '00' + (certIncremental + 1).toString();}
   if (certIncremental+1 >= 10){certIncrementalConvertedMinus = '0' + (certIncremental + 1).toString();}
   if (certIncremental+1 >= 100){certIncrementalConvertedMinus = (certIncremental + 1).toString();}
+    prefs.setString('certIncrementalS', certIncrementalConvertedMinus);
 
   var certificadoID = certificadoIDIncompleto + prefs.getString('certIncremental');
   var certificadoIDs = certificadoIDIncompleto + prefs.getString('certIncrementalS');

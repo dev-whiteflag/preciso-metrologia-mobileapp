@@ -6,7 +6,7 @@ import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-b
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-manometro/preciso-manometro-cert-info.dart';
 //---------------------------------------------------------------------------------//
-var selectionTipo;
+var selectionTipo = '0';
 var selectionInstrumento = '0';
 
 List<Map> precisoTipoInstrumento = [

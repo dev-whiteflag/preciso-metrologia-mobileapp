@@ -359,7 +359,7 @@ class PrecisoBasicCertInfo extends StatelessWidget {
                         )),
                     Expanded(
                         child: TextFormField(
-                      controller: faixaStartURFormController,
+                      controller: faixaEndURFormController,
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.number,
                       validator: (value) {
