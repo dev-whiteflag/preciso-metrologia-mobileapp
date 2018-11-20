@@ -122,6 +122,52 @@ class PrecisoManometroCertInfoState extends State<PrecisoManometroCertInfo> {
               children: <Widget>[
                 Expanded(
                     child: TextFormField(
+                  controller: escalaStartFormController,
+                  textCapitalization: TextCapitalization.none,
+                  keyboardType: TextInputType.number,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Insira o Inicio da Escala";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    labelText: "Inicio da Escala",
+                    suffixText: fetchGrandeza(),
+                    border: OutlineInputBorder(),
+                  ),
+                )),
+                Container(
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.only(left: 5.0, right: 5.0),
+                    child: Text(
+                      'a',
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w200, fontSize: 20.0),
+                    )),
+                Expanded(
+                    child: TextFormField(
+                  controller: escalaEndFormController,
+                  textCapitalization: TextCapitalization.none,
+                  keyboardType: TextInputType.number,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Insira o Final da Escala";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    labelText: "Final da Escala",
+                    suffixText: fetchGrandeza(),
+                    border: OutlineInputBorder(),
+                  ),
+                )),
+              ],
+            ),
+            Divider(),
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: TextFormField(
                   controller: faixaStartFormController,
                   textCapitalization: TextCapitalization.none,
                   keyboardType: TextInputType.number,

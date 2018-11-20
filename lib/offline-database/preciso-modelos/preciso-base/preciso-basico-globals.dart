@@ -39,6 +39,8 @@ final volumeFormController = TextEditingController();
 final faixaStartFormController = TextEditingController();
 final faixaEndFormController = TextEditingController();
 final divisaoFormController = TextEditingController();
+final escalaStartFormController = TextEditingController();
+final escalaEndFormController = TextEditingController();
 
 // -- Instrumento Ambiente - IN
 final escalaStartTempInFormController = TextEditingController();

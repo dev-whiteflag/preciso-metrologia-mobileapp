@@ -71,6 +71,8 @@ Map<String, dynamic> dataManometro = {
   'Grandeza':                                          selectedGrandeza,
   'Classe':                                            selectedClasse,
   'Instrumento':                                       selectedInstrumento,
+  'Inicio de Escala':                                  escalaStartFormController.text,
+  'Final de Escala':                                   escalaEndFormController.text,
   'Inicio da Faixa de Uso':                            faixaStartFormController.text,
   'Final da Faixa de Uso':                             faixaEndFormController.text,
   'Valor de uma Divisão':                              divisaoFormController.text,
