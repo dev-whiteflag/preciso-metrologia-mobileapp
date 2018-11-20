@@ -23,6 +23,19 @@ class PrecisoBasePadroesDropdown extends StatefulWidget {
 class PrecisoBasePadroesDropdownState
     extends State<PrecisoBasePadroesDropdown> {
 
+      @override
+        void initState() {
+          setState(() {
+                      selectedPadrao1 = '0';
+                      selectedPadrao2 = '0';
+                      selectedPadrao3 = '0';
+                      selectionPadrao1 = '0';
+                      selectionPadrao2 = '0';
+                      selectionPadrao3 = '0';
+                    });
+          super.initState();
+        }
+
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[

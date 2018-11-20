@@ -34,13 +34,12 @@ Future<String> getIDCertificado() async {
     prefs.setString('certIncrementalS', certIncrementalConvertedMinus);
 
   var certificadoID = certificadoIDIncompleto + prefs.getString('certIncremental');
-  var certificadoIDF = certificadoIDIncompleto + prefs.getString('certIncrementalS');
 
   certificadoIDFormController.text = certificadoID;
   savedIncremental = prefs.getString('certIncremental');
 
-  print(certificadoIDF);
-  return certificadoIDF;
+  print(certificadoID);
+  return certificadoID;
 }
 
 String getPrecisoID(){

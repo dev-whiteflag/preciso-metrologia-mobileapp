@@ -104,19 +104,9 @@ Map<String, dynamic> dataRaw1 = {
   'V.C.C 3 - Incerteza - Primeira Leitura':              vcc31IncertezaFormController.text,
 
   'V.C.C 4 - Primeira Leitura':                          vcc41FormController.text,
-  'V.I.I 4.1 - Primeira Leitura':                        vcc4Vii11FormController.text,
-  'V.I.I 4.2 - Primeira Leitura':                        vcc4Vii21FormController.text,
-  'V.I.I 4.3 - Primeira Leitura':                        vcc4Vii31FormController.text,
-  'V.I.I 4.4 - Primeira Leitura':                        vcc4Vii41FormController.text,
-  'V.I.I 4.5 - Primeira Leitura':                        vcc4Vii51FormController.text,
   'V.C.C 4 - Incerteza - Primeira Leitura':              vcc41IncertezaFormController.text,
 
   'V.C.C 5 - Primeira Leitura':                          vcc51FormController.text,
-  'V.I.I 5.1 - Primeira Leitura':                        vcc5Vii11FormController.text,
-  'V.I.I 5.2 - Primeira Leitura':                        vcc5Vii21FormController.text,
-  'V.I.I 5.3 - Primeira Leitura':                        vcc5Vii31FormController.text,
-  'V.I.I 5.4 - Primeira Leitura':                        vcc5Vii41FormController.text,
-  'V.I.I 5.5 - Primeira Leitura':                        vcc5Vii51FormController.text,
   'V.C.C 5 - Incerteza - Primeira Leitura':              vcc51IncertezaFormController.text,
 };
 
@@ -146,19 +136,9 @@ Map<String, dynamic> dataRaw2 = {
   'V.C.C 3 - Incerteza - Segunda Leitura':              vcc32IncertezaFormController.text,
 
   'V.C.C 4 - Segunda Leitura':                          vcc42FormController.text,
-  'V.I.I 4.1 - Segunda Leitura':                        vcc4Vii12FormController.text,
-  'V.I.I 4.2 - Segunda Leitura':                        vcc4Vii22FormController.text,
-  'V.I.I 4.3 - Segunda Leitura':                        vcc4Vii32FormController.text,
-  'V.I.I 4.4 - Segunda Leitura':                        vcc4Vii42FormController.text,
-  'V.I.I 4.5 - Segunda Leitura':                        vcc4Vii52FormController.text,
   'V.C.C 4 - Incerteza - Segunda Leitura':              vcc42IncertezaFormController.text,
 
   'V.C.C 5 - Segunda Leitura':                          vcc52FormController.text,
-  'V.I.I 5.1 - Segunda Leitura':                        vcc5Vii12FormController.text,
-  'V.I.I 5.2 - Segunda Leitura':                        vcc5Vii22FormController.text,
-  'V.I.I 5.3 - Segunda Leitura':                        vcc5Vii32FormController.text,
-  'V.I.I 5.4 - Segunda Leitura':                        vcc5Vii42FormController.text,
-  'V.I.I 5.5 - Segunda Leitura':                        vcc5Vii52FormController.text,
   'V.C.C 5 - Incerteza - Segunda Leitura':              vcc52IncertezaFormController.text,
 };
 
@@ -188,19 +168,9 @@ Map<String, dynamic> dataRaw3 = {
   'V.C.C 3 - Incerteza - Terceira Leitura':              vcc33IncertezaFormController.text,
 
   'V.C.C 4 - Terceira Leitura':                          vcc43FormController.text,
-  'V.I.I 4.1 - Terceira Leitura':                        vcc4Vii13FormController.text,
-  'V.I.I 4.2 - Terceira Leitura':                        vcc4Vii23FormController.text,
-  'V.I.I 4.3 - Terceira Leitura':                        vcc4Vii33FormController.text,
-  'V.I.I 4.4 - Terceira Leitura':                        vcc4Vii43FormController.text,
-  'V.I.I 4.5 - Terceira Leitura':                        vcc4Vii53FormController.text,
   'V.C.C 4 - Incerteza - Terceira Leitura':              vcc43IncertezaFormController.text,
 
   'V.C.C 5 - Terceira Leitura':                          vcc53FormController.text,
-  'V.I.I 5.1 - Terceira Leitura':                        vcc5Vii13FormController.text,
-  'V.I.I 5.2 - Terceira Leitura':                        vcc5Vii23FormController.text,
-  'V.I.I 5.3 - Terceira Leitura':                        vcc5Vii33FormController.text,
-  'V.I.I 5.4 - Terceira Leitura':                        vcc5Vii43FormController.text,
-  'V.I.I 5.5 - Terceira Leitura':                        vcc5Vii53FormController.text,
   'V.C.C 5 - Incerteza - Terceira Leitura':              vcc53IncertezaFormController.text,
 };
 

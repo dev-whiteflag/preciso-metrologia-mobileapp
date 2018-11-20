@@ -5,7 +5,7 @@ import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-b
 // ------------------------------------------------------------------------ //
 
 List<Map> precisoInstrumentoManometroGrandeza = [
-  {"id": 0, "text": "<Grandeza Debug>"},
+  {"id": 0, "text": "Escolha uma Grandeza"},
   {"id": 1, "text": "cmHg"},
   {"id": 2, "text": "mmHg"},
   {"id": 3, "text": "hPa"},
@@ -31,6 +31,14 @@ class PrecisoManometroCertInfo extends StatefulWidget {
 }
 
 class PrecisoManometroCertInfoState extends State<PrecisoManometroCertInfo> {
+  
+  initState(){
+    setState((){
+      selectionGrandeza = '0';
+      selectedGrandeza = '0';
+    });
+  }
+  
   updateWrapper() {
     setState(() {});
   }
@@ -109,6 +117,7 @@ class PrecisoManometroCertInfoState extends State<PrecisoManometroCertInfo> {
                     print("Classe do Instrumento: " + selectionClasse);
                   },
                   items: precisoInstrumentoPressaoClasse.map((Map map) {
+                    selectedClasse = map["text"];
                     return new DropdownMenuItem<String>(
                       value: map["id"].toString(),
                       child: new Text(

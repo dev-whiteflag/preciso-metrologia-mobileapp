@@ -390,7 +390,7 @@ var thirdReading = Container(
           Row(children: <Widget>[
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(right: 5.0, top: 5.0),
+                    margin: EdgeInsets.only(right: 5.0, top: 5.0, bottom: 5.0),
                     child: TextFormField(
                       controller: vcc3Vii43FormController,
                       textCapitalization: TextCapitalization.none,
@@ -407,7 +407,7 @@ var thirdReading = Container(
                     ))),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(top: 5.0),
+                    margin: EdgeInsets.only(top: 5.0, bottom: 5.0),
                     child: TextFormField(
                       controller: vcc3Vii53FormController,
                       textCapitalization: TextCapitalization.none,
@@ -423,20 +423,10 @@ var thirdReading = Container(
                       ),
                     ))),
           ]),
-        ])),
-    Divider(),
-    // V.V.C 4
-    Container(
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.grey)),
-        child: Column(children: <Widget>[
-          // Linha 1
           Row(children: <Widget>[
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                    margin: EdgeInsets.only(right: 5.0, top: 5.0),
                     child: TextFormField(
                       controller: vcc43FormController,
                       textCapitalization: TextCapitalization.none,
@@ -453,7 +443,7 @@ var thirdReading = Container(
                     ))),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 5.0),
+                    margin: EdgeInsets.only(top: 5.0),
                     child: TextFormField(
                       controller: vcc43IncertezaFormController,
                       textCapitalization: TextCapitalization.none,
@@ -469,105 +459,6 @@ var thirdReading = Container(
                       ),
                     ))),
           ]),
-          // Linha 2
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc4Vii13FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 1";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 1",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc4Vii23FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 2";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 2",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: TextFormField(
-                controller: vcc4Vii33FormController,
-                textCapitalization: TextCapitalization.none,
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o V.I.I 3";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "V.I.I 3",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-            ],
-          ),
-          Row(children: <Widget>[
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(right: 5.0, top: 5.0),
-                    child: TextFormField(
-                      controller: vcc4Vii43FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 4";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 4",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(top: 5.0),
-                    child: TextFormField(
-                      controller: vcc4Vii53FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 5";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 5",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-          ]),
-        ])),
-    Divider(),
-    Container(
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.grey)),
-        child: Column(children: <Widget>[
-          // Linha 1
           Row(children: <Widget>[
             Expanded(
                 child: Container(
@@ -604,97 +495,8 @@ var thirdReading = Container(
                       ),
                     ))),
           ]),
-          // Linha 2
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc5Vii13FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 1";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 1",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc5Vii23FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 2";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 2",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: TextFormField(
-                controller: vcc5Vii33FormController,
-                textCapitalization: TextCapitalization.none,
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o V.I.I 3";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "V.I.I 3",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-            ],
-          ),
-          Row(children: <Widget>[
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(right: 5.0, top: 5.0),
-                    child: TextFormField(
-                      controller: vcc5Vii43FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 4";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 4",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(top: 5.0),
-                    child: TextFormField(
-                      controller: vcc5Vii53FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 5";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 5",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-          ]),
         ])),
+    Divider(),
   ]),
 );
 var secondReading = Container(
@@ -1118,17 +920,7 @@ var secondReading = Container(
                       ),
                     ))),
           ]),
-        ])),
-    Divider(),
-    // V.V.C 4
-    Container(
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.grey)),
-        child: Column(children: <Widget>[
-          // Linha 1
-          Row(children: <Widget>[
+        Row(children: <Widget>[
             Expanded(
                 child: Container(
                     margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
@@ -1164,109 +956,10 @@ var secondReading = Container(
                       ),
                     ))),
           ]),
-          // Linha 2
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc4Vii12FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 1";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 1",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc4Vii22FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 2";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 2",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: TextFormField(
-                controller: vcc4Vii32FormController,
-                textCapitalization: TextCapitalization.none,
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o V.I.I 3";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "V.I.I 3",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-            ],
-          ),
           Row(children: <Widget>[
             Expanded(
                 child: Container(
                     margin: EdgeInsets.only(right: 5.0, top: 5.0),
-                    child: TextFormField(
-                      controller: vcc4Vii42FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 4";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 4",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(top: 5.0),
-                    child: TextFormField(
-                      controller: vcc4Vii52FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 5";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 5",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-          ]),
-        ])),
-    Divider(),
-    Container(
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.grey)),
-        child: Column(children: <Widget>[
-          // Linha 1
-          Row(children: <Widget>[
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
                     child: TextFormField(
                       controller: vcc52FormController,
                       textCapitalization: TextCapitalization.none,
@@ -1283,7 +976,7 @@ var secondReading = Container(
                     ))),
             Expanded(
                 child: Container(
-                    margin: EdgeInsets.only(bottom: 5.0),
+                    margin: EdgeInsets.only(top: 5.0),
                     child: TextFormField(
                       controller: vcc52IncertezaFormController,
                       textCapitalization: TextCapitalization.none,
@@ -1295,96 +988,6 @@ var secondReading = Container(
                       },
                       decoration: InputDecoration(
                         labelText: "Incerteza",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-          ]),
-          // Linha 2
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc5Vii12FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 1";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 1",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: Container(
-                      margin: EdgeInsets.only(right: 5.0),
-                      child: TextFormField(
-                        controller: vcc5Vii22FormController,
-                        textCapitalization: TextCapitalization.none,
-                        keyboardType: TextInputType.number,
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return "Insira o V.I.I 2";
-                          }
-                        },
-                        decoration: InputDecoration(
-                          labelText: "V.I.I 2",
-                          border: OutlineInputBorder(),
-                        ),
-                      ))),
-              Expanded(
-                  child: TextFormField(
-                controller: vcc5Vii32FormController,
-                textCapitalization: TextCapitalization.none,
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o V.I.I 3";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "V.I.I 3",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-            ],
-          ),
-          Row(children: <Widget>[
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(right: 5.0, top: 5.0),
-                    child: TextFormField(
-                      controller: vcc5Vii42FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 4";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 4",
-                        border: OutlineInputBorder(),
-                      ),
-                    ))),
-            Expanded(
-                child: Container(
-                    margin: EdgeInsets.only(top: 5.0),
-                    child: TextFormField(
-                      controller: vcc5Vii52FormController,
-                      textCapitalization: TextCapitalization.none,
-                      keyboardType: TextInputType.number,
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return "Insira o V.I.I 5";
-                        }
-                      },
-                      decoration: InputDecoration(
-                        labelText: "V.I.I 5",
                         border: OutlineInputBorder(),
                       ),
                     ))),
