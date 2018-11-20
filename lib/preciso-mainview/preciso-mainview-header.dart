@@ -53,7 +53,7 @@ class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader>{
           alignment: Alignment.center,
           child: OutlineButton(
             onPressed: () {
-              sendFirebaseData(selectedModel);
+              sendFirebaseData(selectedFModel);
               _update();},
             child: Container(
               padding: EdgeInsets.only(left: 100.0, right: 100.0),

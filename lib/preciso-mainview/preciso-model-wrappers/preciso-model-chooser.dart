@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 // ------------------------------------------------------------------------ //
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-manometro/preciso-manometro-cert-info.dart';
@@ -128,7 +129,15 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
                   onChanged: (String newValue) {
                     setState(() {
                       selectionTipo = newValue;
-                      selectedModel = newValue;
+                      selectedFModel = newValue;
+
+                      if (selectedFModel == '3'){
+                        vcc12FormController.text = "Desabilitado";
+                        vcc22FormController.text = "Desabilitado";
+                        vcc32FormController.text = "Desabilitado";
+                        vcc42FormController.text = "Desabilitado";
+                        vcc52FormController.text = "Desabilitado";
+                      }
                     });
                     updateWrapper();
                     print("Tipo de Instrumento: " + selectionTipo);

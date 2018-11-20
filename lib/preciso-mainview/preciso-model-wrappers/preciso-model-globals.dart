@@ -5,5 +5,5 @@ library precisometrologia_app.model.globals;
 // VAR LIST - VÁRIAVEIS GLOBAIS DO MODELO
 //---------------------------------------------------------------------------------//
 
-var selectedModel = '0';
+var selectedFModel = '0';
 var selectedInstrumento = '0';
