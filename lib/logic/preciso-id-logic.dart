@@ -12,6 +12,7 @@ Future<String> getIDCertificado() async {
 
   var dateTime = new DateTime.now();
   var dateTimeDay = DateFormat("dd").format(dateTime);
+  nowDay = dateTimeDay;
   var dateTimeMonth = new DateFormat("MM").format(dateTime);
   nowMonth = dateTimeMonth;
   var dateTimeYear = new DateFormat("yyyy").format(dateTime);

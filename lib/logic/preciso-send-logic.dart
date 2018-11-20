@@ -189,6 +189,7 @@ Future<Null> sendFirebaseData(var selectedModel) async {
         'PrecisoID':         getPrecisoID(),
         'Mês':               nowMonth,
         'Ano':               nowYear,
+        'Data de Calibração': (nowDay + "/" + nowMonth + "/" + nowYear),
         'Incremental':       savedIncremental,
         'isUsingRawData2':   isSecondReadingEnabled.toString(),
         'isUsingRawData3':   isThirdReadingEnabled.toString(),

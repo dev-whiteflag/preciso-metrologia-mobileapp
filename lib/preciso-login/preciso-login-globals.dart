@@ -11,5 +11,6 @@ var certIncrementalConverted = "";
 var certIncrementalConvertedMinus = "";
 var nowYear;
 var nowMonth;
+var nowDay;
 var savedIncremental;
 
