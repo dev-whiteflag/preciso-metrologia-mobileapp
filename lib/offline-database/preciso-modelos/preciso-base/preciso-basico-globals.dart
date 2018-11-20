@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 // VAR LIST - VÁRIAVEIS GLOBAIS DO MODELO
 //---------------------------------------------------------------------------------//
 
-var selectedModel;
-var selectionGrandeza = '1';
-var selectedGrandeza;
+var selectedModel = '0';
+var selectionGrandeza = '0';
+var selectedGrandeza = '0';
+var selectionClasse = '0';
+var selectedClasse = '0';
 
 // TextControllers
 

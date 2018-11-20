@@ -69,6 +69,7 @@ Map<String, dynamic> dataVidraria = {
 Map<String, dynamic> dataManometro = {
   'Tipo de Instrumento':                              "Medidor de Pressão",
   'Grandeza':                                          selectedGrandeza,
+  'Classe':                                            selectedClasse,
   'Instrumento':                                       selectedInstrumento,
   'Inicio da Faixa de Uso':                            faixaStartFormController.text,
   'Final da Faixa de Uso':                             faixaEndFormController.text,
