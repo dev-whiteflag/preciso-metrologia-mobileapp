@@ -209,6 +209,7 @@ class PrecisoManometroCertInfoState extends State<PrecisoManometroCertInfo> {
                 )),
               ],
             ),
+            Divider(),
             Container(
                 margin: EdgeInsets.only(top: 5.0),
                 child: TextFormField(

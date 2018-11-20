@@ -205,7 +205,9 @@ Map<String, dynamic> dataRaw3 = {
 };
 
 Map<String, dynamic> dataPadrao = {
-  'Padrão':          selectedPadrao,
+  'Padrão 1':          selectedPadrao1,
+  'Padrão 2':          selectedPadrao2,
+  'Padrão 3':          selectedPadrao3,
 };
 
 Future<Null> sendFirebaseData(var selectedModel) async {

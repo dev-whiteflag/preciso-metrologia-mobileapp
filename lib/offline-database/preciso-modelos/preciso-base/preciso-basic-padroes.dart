@@ -1,8 +1,12 @@
 // ------------------------------------------------------------------------- //
 import 'package:flutter/material.dart';
 // ------------------------------------------------------------------------ //
-var selectionPadrao;
-var selectedPadrao;
+var selectionPadrao1 = '0';
+var selectionPadrao2 = '0';
+var selectionPadrao3 = '0';
+var selectedPadrao1 = '0';
+var selectedPadrao2 = '0';
+var selectedPadrao3 = '0';
 
 List<Map> precisoPadroes = [
   {"id": 0, "text": "Nenhum Padrão Especificado"},
@@ -28,15 +32,61 @@ class PrecisoBasePadroesDropdownState
                   isDense: false,
                   isExpanded: true,
                   hint: new Text("Selecione um Padrão"),
-                  value: selectionPadrao,
+                  value: selectionPadrao1,
                   onChanged: (String newValue) {
                     setState(() {
-                      selectionPadrao = newValue;
+                      selectionPadrao1 = newValue;
                     });
-                    print("Padrão: " + selectionPadrao);
+                    print("Padrão: " + selectionPadrao1);
                   },
                   items: precisoPadroes.map((Map map) {
-                    selectedPadrao = map["text"];
+                    selectedPadrao1 = map["text"];
+                    return new DropdownMenuItem<String>(
+                      value: map["id"].toString(),
+                      child: new Text(
+                        map["text"],
+                      ),
+                    );
+                  }).toList(),
+                )),
+                 Container(
+                margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                child: new DropdownButton<String>(
+                  isDense: false,
+                  isExpanded: true,
+                  hint: new Text("Selecione um Padrão"),
+                  value: selectionPadrao2,
+                  onChanged: (String newValue) {
+                    setState(() {
+                      selectionPadrao2 = newValue;
+                    });
+                    print("Padrão: " + selectionPadrao2);
+                  },
+                  items: precisoPadroes.map((Map map) {
+                    selectedPadrao2 = map["text"];
+                    return new DropdownMenuItem<String>(
+                      value: map["id"].toString(),
+                      child: new Text(
+                        map["text"],
+                      ),
+                    );
+                  }).toList(),
+                )),
+                 Container(
+                margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                child: new DropdownButton<String>(
+                  isDense: false,
+                  isExpanded: true,
+                  hint: new Text("Selecione um Padrão"),
+                  value: selectionPadrao3,
+                  onChanged: (String newValue) {
+                    setState(() {
+                      selectionPadrao3 = newValue;
+                    });
+                    print("Padrão: " + selectionPadrao3);
+                  },
+                  items: precisoPadroes.map((Map map) {
+                    selectedPadrao3 = map["text"];
                     return new DropdownMenuItem<String>(
                       value: map["id"].toString(),
                       child: new Text(

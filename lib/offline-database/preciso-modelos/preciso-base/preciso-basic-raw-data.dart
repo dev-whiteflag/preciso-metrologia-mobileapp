@@ -165,7 +165,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                     Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              margin: EdgeInsets.only(right: 5.0, top: 5.0),
                               child: TextFormField(
                                 controller: vcc1Vii41FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -182,7 +182,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                               ))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(bottom: 5.0),
+                              margin: EdgeInsets.only(top: 5.0),
                               child: TextFormField(
                                 controller: vcc1Vii51FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -301,7 +301,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                     Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              margin: EdgeInsets.only(right: 5.0, top: 5.0),
                               child: TextFormField(
                                 controller: vcc2Vii41FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -318,7 +318,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                               ))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(bottom: 5.0),
+                              margin: EdgeInsets.only(top: 5.0),
                               child: TextFormField(
                                 controller: vcc2Vii51FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -437,7 +437,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                     Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              margin: EdgeInsets.only(right: 5.0, top: 5.0),
                               child: TextFormField(
                                 controller: vcc3Vii41FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -454,7 +454,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                               ))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(bottom: 5.0),
+                              margin: EdgeInsets.only(top: 5.0),
                               child: TextFormField(
                                 controller: vcc3Vii51FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -573,7 +573,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                     Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              margin: EdgeInsets.only(right: 5.0, top: 5.0),
                               child: TextFormField(
                                 controller: vcc4Vii41FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -590,7 +590,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                               ))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(bottom: 5.0),
+                              margin: EdgeInsets.only(top: 5.0),
                               child: TextFormField(
                                 controller: vcc4Vii51FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -708,7 +708,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                     Row(children: <Widget>[
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              margin: EdgeInsets.only(right: 5.0, top: 5.0),
                               child: TextFormField(
                                 controller: vcc5Vii41FormController,
                                 textCapitalization: TextCapitalization.none,
@@ -725,7 +725,7 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
                               ))),
                       Expanded(
                           child: Container(
-                              margin: EdgeInsets.only(bottom: 5.0),
+                              margin: EdgeInsets.only(top: 5.0),
                               child: TextFormField(
                                 controller: vcc5Vii51FormController,
                                 textCapitalization: TextCapitalization.none,
