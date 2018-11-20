@@ -28,18 +28,19 @@ Future<String> getIDCertificado() async {
   prefs.setString('certIncremental', certIncrementalConverted);
   prefs.setString('lastDay', dateTimeDay);
 
-  if (certIncremental+1 >= 0){certIncrementalConvertedMinus = '00' + (certIncremental + 1).toString();}
-  if (certIncremental+1 >= 10){certIncrementalConvertedMinus = '0' + (certIncremental + 1).toString();}
-  if (certIncremental+1 >= 100){certIncrementalConvertedMinus = (certIncremental + 1).toString();}
+  if (certIncremental >= 0){certIncrementalConvertedMinus = '00' + (certIncremental - 1).toString();}
+  if (certIncremental >= 10){certIncrementalConvertedMinus = '0' + (certIncremental - 1).toString();}
+  if (certIncremental >= 100){certIncrementalConvertedMinus = (certIncremental - 1).toString();}
     prefs.setString('certIncrementalS', certIncrementalConvertedMinus);
 
   var certificadoID = certificadoIDIncompleto + prefs.getString('certIncremental');
+  var certificadoIDF = certificadoIDIncompleto + prefs.getString('certIncrementalS');
 
   certificadoIDFormController.text = certificadoID;
   savedIncremental = prefs.getString('certIncremental');
 
-  print(certificadoID);
-  return certificadoID;
+  print(certificadoIDF);
+  return certificadoIDF;
 }
 
 String getPrecisoID(){
