@@ -11,19 +11,19 @@ var selectionTipo = '0';
 var selectionInstrumento = '0';
 
 List<Map> precisoTipoInstrumento = [
-  {"id": 0, "text": "<Tipo de Instrumento Debug>"},
-  {"id": 1, "text": "Termohigrometro"},
+  {"id": 0, "text": "Selecione um Tipo de Instrumento"},
+  {"id": 1, "text": "Termohigrômetro"},
   {"id": 2, "text": "Vidraria Graduada"},
   {"id": 3, "text": "Medidores de Pressão"},
 ];
 
 List<Map> precisoInstrumentoTermohigrometro = [
-  {"id": 0, "text": "<Instrumento Debug>"},
+  {"id": 0, "text": "Selecione um Termohigrômetro"},
   {"id": 1, "text": "Termohigrômetro com Sensor Interno e Externo"},
 ];
 
 List<Map> precisoInstrumentoVidrariaGraduada = [
-  {"id": 0, "text": "<Instrumento Debug>"},
+  {"id": 0, "text": "Selecione uma Vidraria"},
   {"id": 1, "text": "Balão Graduado"},
   {"id": 2, "text": "Balde Graduado"},
   {"id": 3, "text": "Becker Graduado"},
@@ -55,6 +55,12 @@ class PrecisoModelDropdown extends StatefulWidget {
 }
 
 class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
+  initState(){
+    setState(() {
+          selectionInstrumento = '0';
+          selectionTipo = '0';
+        });
+  }
   updateWrapper() {
     setState(() {
     });
@@ -130,6 +136,7 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
                     setState(() {
                       selectionTipo = newValue;
                       selectedFModel = newValue;
+                      selectionInstrumento = '0';
 
                       if (selectedFModel == '3'){
                         vcc12FormController.text = "Desabilitado";

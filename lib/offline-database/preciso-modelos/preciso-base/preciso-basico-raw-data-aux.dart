@@ -1268,7 +1268,7 @@ var secondReading = Container(
                 child: Container(
                     margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
                     child: TextFormField(
-                      controller: vcc53FormController,
+                      controller: vcc52FormController,
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.number,
                       validator: (value) {
@@ -1285,7 +1285,7 @@ var secondReading = Container(
                 child: Container(
                     margin: EdgeInsets.only(bottom: 5.0),
                     child: TextFormField(
-                      controller: vcc53IncertezaFormController,
+                      controller: vcc52IncertezaFormController,
                       textCapitalization: TextCapitalization.none,
                       keyboardType: TextInputType.number,
                       validator: (value) {
