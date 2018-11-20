@@ -3,32 +3,37 @@ import 'package:flutter/material.dart';
 import 'package:precisometrologia_app/varlists/globalslib.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-raw-data-aux.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
+
 // ------------------------------------------------------------------------ //
 var isSecondReadingEnabled = false;
 var isThirdReadingEnabled = false;
 
-class PrecisoBasicRawData extends StatefulWidget{
+class PrecisoBasicRawData extends StatefulWidget {
   @override
   PrecisoBasicRawDataState createState() => PrecisoBasicRawDataState();
 }
 
-class PrecisoBasicRawDataState extends State<PrecisoBasicRawData>{
-  
-  switchSecondReading(){
-    if (isSecondReadingEnabled == true){return secondReading;}
-    else {return Container();}
+class PrecisoBasicRawDataState extends State<PrecisoBasicRawData> {
+  switchSecondReading() {
+    if (isSecondReadingEnabled == true) {
+      return secondReading;
+    } else {
+      return Container();
+    }
   }
 
-    switchThirdReading(){
-    if (isThirdReadingEnabled == true){return thirdReading;}
-    else {return Container();}
+  switchThirdReading() {
+    if (isThirdReadingEnabled == true) {
+      return thirdReading;
+    } else {
+      return Container();
+    }
   }
 
-  updateWrapper(){
-    setState(() {
-        });
+  updateWrapper() {
+    setState(() {});
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -156,6 +161,43 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData>{
                         )),
                       ],
                     ),
+                    // Linha 3
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc1Vii41FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 4";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 4",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc1Vii51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
                   ])),
               Divider(),
               // V.V.C 2
@@ -256,6 +298,42 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData>{
                         )),
                       ],
                     ),
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc2Vii41FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 4";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 4",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc2Vii51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
                   ])),
               Divider(),
               // V.V.C 3
@@ -356,6 +434,42 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData>{
                         )),
                       ],
                     ),
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc3Vii41FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 4";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 4",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc3Vii51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
                   ])),
               Divider(),
               // V.V.C 4
@@ -456,52 +570,229 @@ class PrecisoBasicRawDataState extends State<PrecisoBasicRawData>{
                         )),
                       ],
                     ),
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc4Vii41FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 4";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 4",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc4Vii51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
+                  ])),
+                  Divider(),
+                  Container(
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(color: Colors.grey)),
+                  child: Column(children: <Widget>[
+                    // Linha 1
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.V.C 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.V.C 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc51IncertezaFormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira a Incerteza do Padrões";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "Incerteza",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
+                    // Linha 2
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                            child: Container(
+                                margin: EdgeInsets.only(right: 5.0),
+                                child: TextFormField(
+                                  controller: vcc5Vii11FormController,
+                                  textCapitalization: TextCapitalization.none,
+                                  keyboardType: TextInputType.number,
+                                  validator: (value) {
+                                    if (value.isEmpty) {
+                                      return "Insira o V.I.I 1";
+                                    }
+                                  },
+                                  decoration: InputDecoration(
+                                    labelText: "V.I.I 1",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                ))),
+                        Expanded(
+                            child: Container(
+                                margin: EdgeInsets.only(right: 5.0),
+                                child: TextFormField(
+                                  controller: vcc5Vii21FormController,
+                                  textCapitalization: TextCapitalization.none,
+                                  keyboardType: TextInputType.number,
+                                  validator: (value) {
+                                    if (value.isEmpty) {
+                                      return "Insira o V.I.I 2";
+                                    }
+                                  },
+                                  decoration: InputDecoration(
+                                    labelText: "V.I.I 2",
+                                    border: OutlineInputBorder(),
+                                  ),
+                                ))),
+                        Expanded(
+                            child: TextFormField(
+                          controller: vcc5Vii31FormController,
+                          textCapitalization: TextCapitalization.none,
+                          keyboardType: TextInputType.number,
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return "Insira o V.I.I 3";
+                            }
+                          },
+                          decoration: InputDecoration(
+                            labelText: "V.I.I 3",
+                            border: OutlineInputBorder(),
+                          ),
+                        )),
+                      ],
+                    ),
+                    Row(children: <Widget>[
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(right: 5.0, bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc5Vii41FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 4";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 4",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                      Expanded(
+                          child: Container(
+                              margin: EdgeInsets.only(bottom: 5.0),
+                              child: TextFormField(
+                                controller: vcc5Vii51FormController,
+                                textCapitalization: TextCapitalization.none,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return "Insira o V.I.I 5";
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                  labelText: "V.I.I 5",
+                                  border: OutlineInputBorder(),
+                                ),
+                              ))),
+                    ]),
                   ])),
             ]),
           ),
           Divider(),
           // Segunda Leitura
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget> [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             Container(
-                child: Text("Ativar Segunda Leitura?",
-                    overflow: TextOverflow.clip,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15.0,
-                        color: Colors.blueGrey)),
-              ),
+              child: Text("Ativar Segunda Leitura?",
+                  overflow: TextOverflow.clip,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15.0,
+                      color: Colors.blueGrey)),
+            ),
             Checkbox(
-                value: isSecondReadingEnabled,
-                onChanged: (bool newValue){setState(() {
-                                  isSecondReadingEnabled = newValue;
-                                  updateWrapper();
-                                });},
-              )]),
+              value: isSecondReadingEnabled,
+              onChanged: (bool newValue) {
+                setState(() {
+                  isSecondReadingEnabled = newValue;
+                  updateWrapper();
+                });
+              },
+            )
+          ]),
           Divider(),
-          Container(child: switchSecondReading(),),
+          Container(
+            child: switchSecondReading(),
+          ),
           // Terceira Leitura
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget> [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             Container(
-                child: Text("Ativar Terceira Leitura?",
-                    overflow: TextOverflow.clip,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15.0,
-                        color: Colors.blueGrey)),
-              ),
+              child: Text("Ativar Terceira Leitura?",
+                  overflow: TextOverflow.clip,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15.0,
+                      color: Colors.blueGrey)),
+            ),
             Checkbox(
-                value: isThirdReadingEnabled,
-                onChanged: (bool newValue){setState(() {
-                                  isThirdReadingEnabled = newValue;
-                                  updateWrapper();
-                                });},
-              )]),
+              value: isThirdReadingEnabled,
+              onChanged: (bool newValue) {
+                setState(() {
+                  isThirdReadingEnabled = newValue;
+                  updateWrapper();
+                });
+              },
+            )
+          ]),
           Divider(),
-          Container(child: switchThirdReading(),),
+          Container(
+            child: switchThirdReading(),
+          ),
         ],
       ),
     );
