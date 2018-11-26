@@ -7,58 +7,76 @@ import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/pr
 //---------------------------------------------------------------------------------//
 var certificadoIDFormController = TextEditingController();
 
-class PrecisoMainViewHeader extends StatefulWidget{
+class PrecisoMainViewHeader extends StatefulWidget {
   @override
   PrecisoMainViewHeaderState createState() => new PrecisoMainViewHeaderState();
 }
 
-class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader>{
+class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader> {
   var _certificadoID = getIDCertificado();
 
-/*   initState(){
-    _getID();
-  } */
+  var noInternetSnackbar = SnackBar(
+    content: Text(
+        "Sem conexão a Internet! Certificados serão enviados quando conectar a uma Rede."),
+    backgroundColor: Colors.red,
+  );
 
-  _update(){
-    setState(() {
-        certIncremental++;
-        _certificadoID = getIDCertificado();
-        //_getID();
-        });
+  var workingInternetSnackbar = SnackBar(
+    content: Text("Certificado enviado com Sucesso!"),
+    backgroundColor: Colors.green,
+  );
+
+  returnWifiStatus() {
+    if (checkInternetConnection() == false) {
+      Scaffold.of(context).showSnackBar(noInternetSnackbar);
+    } else {
+      Scaffold.of(context).showSnackBar(workingInternetSnackbar);
+    }
   }
 
- /*  _getID() async{
-    certificadoIDFormController.text = await _certificadoID;
+  _update() {
     setState(() {
-        });
-  } */
+      certIncremental++;
+      _certificadoID = getIDCertificado();
+      //_getID();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
-      Container(
-          alignment: Alignment.center,
-          margin: EdgeInsets.only(bottom: 5.0),
-          child: TextFormField(
-                controller: certificadoIDFormController,
-                enabled: false,
-                textAlign: TextAlign.center,
-                decoration: InputDecoration(
-                  labelText: ("Certificado"),
-                  labelStyle: TextStyle(color: Colors.black, ),
-                  border: OutlineInputBorder(),
+    return Column(
+      children: <Widget>[
+        Container(
+            alignment: Alignment.center,
+            margin: EdgeInsets.only(bottom: 5.0),
+            child: TextFormField(
+              controller: certificadoIDFormController,
+              enabled: false,
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                labelText: ("Certificado"),
+                labelStyle: TextStyle(
+                  color: Colors.white,
                 ),
-              )),
-      Container(
-          alignment: Alignment.center,
-          child: OutlineButton(
-            onPressed: () {
-              sendFirebaseData(selectedFModel);
-              _update();},
-            child: Container(
-              padding: EdgeInsets.only(left: 100.0, right: 100.0),
-              child: Text(
-              "Enviar", style: TextStyle(color: Colors.blue),),))),
-    ],);
+                border: OutlineInputBorder(),
+              ),
+            )),
+        Container(
+            alignment: Alignment.center,
+            child: OutlineButton(
+                onPressed: () {
+                  returnWifiStatus();
+                  sendFirebaseData(selectedFModel);
+                  _update();
+                },
+                child: Container(
+                  padding: EdgeInsets.only(left: 100.0, right: 100.0),
+                  child: Text(
+                    "Enviar",
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                ))),
+      ],
+    );
   }
 }

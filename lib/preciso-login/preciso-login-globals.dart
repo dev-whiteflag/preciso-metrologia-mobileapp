@@ -13,4 +13,5 @@ var nowYear;
 var nowMonth;
 var nowDay;
 var savedIncremental;
+bool internetConnection;
 

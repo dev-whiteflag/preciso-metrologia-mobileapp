@@ -1,6 +1,8 @@
 //---------------------------------------------------------------------------------//
 import 'dart:async';
+import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-padroes.dart';
@@ -180,20 +182,41 @@ Map<String, dynamic> dataPadrao = {
   'Padrão 3':          selectedPadrao3,
 };
 
-Future<Null> sendFirebaseData(var selectedModel) async {
-      // Informações Especificas
-      switch (selectedModel){
+returnActiveInstrument(){
+  switch (selectedModel){
         case '1':
-        exportInstrumentoData = dataTermohigrometro;
+        return dataTermohigrometro;
         break;
         case '2':
-        exportInstrumentoData = dataVidraria;
+        return dataVidraria;
         break;
         case '3':
-        exportInstrumentoData = dataManometro;
+        return dataManometro;
         break;
       }
+}
 
+checkInternetConnection() async{
+  try {
+    final result = await InternetAddress.lookup('google.com');
+    if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+    internetConnection = true;
+    print('Internet Connection = true');
+    return true;
+    }
+  } on SocketException catch (_) {
+    internetConnection = false;
+    print('Internet Connection = false');
+    return false;
+  }
+}
+
+Future<Null> sendFirebaseData(var selectedModel) async {
+    
+    Firestore.instance.enablePersistence(true);
+    exportInstrumentoData = returnActiveInstrument();
+    var certID = await getIDCertificado();
+      
       if (isSecondReadingEnabled == true)
       {exportRawData2 = dataRaw2;}
       else {exportRawData2 = dataRaw1;}
@@ -201,8 +224,6 @@ Future<Null> sendFirebaseData(var selectedModel) async {
       if (isThirdReadingEnabled == true)
       {exportRawData3 = dataRaw3;}
       else {exportRawData3 = dataRaw1;}
-
-      var certID = await getIDCertificado();
 
       Map<String, dynamic> dataHeader = {
         'ID':                certID,
@@ -219,8 +240,6 @@ Future<Null> sendFirebaseData(var selectedModel) async {
                                           ..addAll(dataRaw1)..addAll(exportRawData2)..addAll(exportRawData3)..addAll(dataPadrao)
                                           ..addAll(dataAdicional)..addAll(dataHeader);
 
-      await Firestore.instance
-      .collection('preciso-certificados')
-      .document((certID.toString()))
-      .setData(finalDataMap);
+      await Firestore.instance.collection('preciso-certificados').document((certID.toString()))
+          .setData(finalDataMap);
 }

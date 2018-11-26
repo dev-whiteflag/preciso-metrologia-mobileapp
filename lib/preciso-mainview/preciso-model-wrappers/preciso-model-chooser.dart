@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 // ------------------------------------------------------------------------ //
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-manometro/preciso-manometro-cert-info.dart';
+
 //---------------------------------------------------------------------------------//
 var selectionTipo = '0';
 var selectionInstrumento = '0';
@@ -46,7 +46,7 @@ List<Map> precisoInstrumentoManometro = [
 ];
 
 List<Map> precisoInstrumentoEmpty = [
-  {"id": 0, "text": "ERRO: Tipo de Instrumento Inválido"},
+  {"id": 0, "text": "Selecione um Instrumento Válido"},
 ];
 
 class PrecisoModelDropdown extends StatefulWidget {
@@ -55,15 +55,15 @@ class PrecisoModelDropdown extends StatefulWidget {
 }
 
 class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
-  initState(){
+  initState() {
     setState(() {
-          selectionInstrumento = '0';
-          selectionTipo = '0';
-        });
-  }
-  updateWrapper() {
-    setState(() {
+      selectionInstrumento = '0';
+      selectionTipo = '0';
     });
+  }
+
+  updateWrapper() {
+    setState(() {});
   }
 
   fetchInstrumentoType() {
@@ -71,12 +71,13 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
       case '0':
         return Column(children: <Widget>[
           Container(
-              margin: EdgeInsets.only(left: 5.0, right: 5.0),
-              child: Text(
-                'Selecione um Instrumento',
-                overflow: TextOverflow.clip,
-                style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20.0),
-              )),
+            margin: EdgeInsets.only(left: 5.0, right: 5.0),
+            child: Text(
+              'Selecione um Instrumento',
+              overflow: TextOverflow.clip,
+              style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20.0),
+            ),
+          ),
           Divider()
         ]);
         break;
@@ -126,64 +127,58 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
           margin: EdgeInsets.all(1.0),
           child: Column(children: <Widget>[
             Container(
-                margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                child: new DropdownButton<String>(
-                  isDense: false,
-                  isExpanded: true,
-                  hint: new Text("Selecione o Tipo de Instrumento"),
-                  value: selectionTipo,
-                  onChanged: (String newValue) {
-                    setState(() {
-                      selectionTipo = newValue;
-                      selectedFModel = newValue;
-                      selectionInstrumento = '0';
-
-                      if (selectedFModel == '3'){
-                        vcc12FormController.text = "Desabilitado";
-                        vcc22FormController.text = "Desabilitado";
-                        vcc32FormController.text = "Desabilitado";
-                        vcc42FormController.text = "Desabilitado";
-                        vcc52FormController.text = "Desabilitado";
-                      }
-                    });
-                    updateWrapper();
-                    print("Tipo de Instrumento: " + selectionTipo);
-                  },
-                  items: precisoTipoInstrumento.map((Map map) {
-                    return new DropdownMenuItem<String>(
-                      value: map["id"].toString(),
-                      child: new Text(
-                        map["text"],
-                      ),
-                    );
-                  }).toList(),
-                )),
+              child: new DropdownButton<String>(
+                isDense: false,
+                isExpanded: true,
+                hint: new Text("Selecione o Tipo de Instrumento"),
+                value: selectionTipo,
+                onChanged: (String newValue) {
+                  setState(() {
+                    selectionTipo = newValue;
+                    selectedFModel = newValue;
+                    selectionInstrumento = '0';
+                  });
+                  
+                  updateWrapper();
+                  print("Tipo de Instrumento: " + selectionTipo);
+                },
+                items: precisoTipoInstrumento.map((Map map) {
+                  return new DropdownMenuItem<String>(
+                    value: map["id"].toString(),
+                    child: new Text(
+                      map["text"],
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
           ])),
       Divider(),
       Container(
-          margin: EdgeInsets.only(left: 10.0, right: 10.0),
-          child: new DropdownButton<String>(
-            isDense: false,
-            isExpanded: true,
-            hint: new Text("Selecione o Instrumento"),
-            value: selectionInstrumento,
-            onChanged: (String newValue) {
-              setState(() {
-                selectionInstrumento = newValue;
-              });
-              updateWrapper();
-              print("Instrumento: " + selectionInstrumento);
-            },
-            items: fetchInstrumento().map((Map map) {
-              selectedInstrumento = map["text"];
-              return new DropdownMenuItem<String>(
-                value: map["id"].toString(),
-                child: new Text(
-                  map["text"],
-                ),
-              );
-            }).toList(),
-          )),
+        margin: EdgeInsets.all(1.0),
+        child: new DropdownButton<String>(
+          isDense: false,
+          isExpanded: true,
+          hint: new Text("Selecione o Instrumento"),
+          value: selectionInstrumento,
+          onChanged: (String newValue) {
+            setState(() {
+              selectionInstrumento = newValue;
+            });
+            updateWrapper();
+            print("Instrumento: " + selectionInstrumento);
+          },
+          items: fetchInstrumento().map((Map map) {
+            selectedInstrumento = map["text"];
+            return new DropdownMenuItem<String>(
+              value: map["id"].toString(),
+              child: new Text(
+                map["text"],
+              ),
+            );
+          }).toList(),
+        ),
+      ),
       Divider(),
       Column(children: <Widget>[
         Container(

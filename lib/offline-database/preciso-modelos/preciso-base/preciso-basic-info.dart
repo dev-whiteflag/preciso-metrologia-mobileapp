@@ -14,77 +14,87 @@ class PrecisoBasicInfo extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-              margin: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 10.0),
+              margin: EdgeInsets.only(
+                  left: 5.0, right: 5.0, bottom: 15.0, top: 5.0),
               child: Text(
                 'Informações Gerais',
                 overflow: TextOverflow.clip,
                 style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20.0),
               )),
           Container(
-              margin: EdgeInsets.only(bottom: 10.0),
-              child: TextFormField(
-                controller: empresaFormController,
-                textCapitalization: TextCapitalization.words,
-                keyboardType: TextInputType.text,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o Nome da Empresa.";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "Empresa",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-          Container(
-              margin: EdgeInsets.only(bottom: 10.0),
-              child: TextFormField(
-                controller: enderecoFormController,
-                textCapitalization: TextCapitalization.words,
-                keyboardType: TextInputType.text,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira o Endereço da Empresa.";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "Endereço",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-          Container(
-              margin: EdgeInsets.only(bottom: 10.0),
-              child: TextFormField(
-                controller: cidadeEstadoFormController,
-                textCapitalization: TextCapitalization.words,
-                keyboardType: TextInputType.text,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Insira a Cidade c/ Estado.";
-                  }
-                },
-                decoration: InputDecoration(
-                  labelText: "Cidade c/ Estado",
-                  border: OutlineInputBorder(),
-                ),
-              )),
-          Container(
-              child: TextFormField(
-            controller: equipFormController,
-            textCapitalization: TextCapitalization.words,
-            keyboardType: TextInputType.text,
-            validator: (value) {
-              if (value.isEmpty) {
-                equipFormController.text = "Não Especificado";
-              }
-            },
-            decoration: InputDecoration(
-              labelText: "Local, Setor, Área, Equipamento",
-              border: OutlineInputBorder(),
-            ),
-          )),
+              padding: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(color: Colors.grey)),
+              child: Column(children: <Widget>[
+                Container(
+                    margin: EdgeInsets.only(bottom: 10.0),
+                    child: TextFormField(
+                      autovalidate: true,
+                      controller: empresaFormController,
+                      textCapitalization: TextCapitalization.words,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return "Insira o Nome da Empresa.";
+                        }
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Empresa",
+                        border: OutlineInputBorder(),
+                      ),
+                    )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 10.0),
+                    child: TextFormField(
+                      autovalidate: true,
+                      controller: enderecoFormController,
+                      textCapitalization: TextCapitalization.words,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return "Insira o Endereço da Empresa.";
+                        }
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Endereço",
+                        border: OutlineInputBorder(),
+                      ),
+                    )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 10.0),
+                    child: TextFormField(
+                      autovalidate: true,
+                      controller: cidadeEstadoFormController,
+                      textCapitalization: TextCapitalization.words,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return "Insira a Cidade c/ Estado da Empresa.";
+                        }
+                      },
+                      decoration: InputDecoration(
+                        labelText: "Cidade c/ Estado",
+                        border: OutlineInputBorder(),
+                      ),
+                    )),
+                Container(
+                    child: TextFormField(
+                  controller: equipFormController,
+                  textCapitalization: TextCapitalization.words,
+                  keyboardType: TextInputType.text,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      equipFormController.text = "Não Especificado";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    labelText: "Local, Setor, Área, Equipamento",
+                    border: OutlineInputBorder(),
+                  ),
+                )),
+              ])),
           Divider(),
-          PrecisoModelDropdown(),
           Container(
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
@@ -103,6 +113,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
+                      autovalidate: true,
                       controller: marcaFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -119,6 +130,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
+                      autovalidate: true,
                       controller: modeloFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -136,6 +148,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
+                      autovalidate: true,
                       controller: numeroSerieFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -151,6 +164,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                     )),
                 Container(
                     child: TextFormField(
+                  autovalidate: true,
                   controller: identificacaoFormController,
                   textCapitalization: TextCapitalization.words,
                   keyboardType: TextInputType.text,
@@ -164,6 +178,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 )),
+                PrecisoModelDropdown(),
               ]))
         ],
       ),

@@ -30,11 +30,6 @@ class PrecisoMainListView extends StatelessWidget {
                 Container(
                     margin:
                         EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
-                    child: PrecisoBasicRawData()),
-                Divider(),
-                Container(
-                    margin:
-                        EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
                     child: PrecisoBasePadroesDropdown()),
                 Divider(),
                 Container(

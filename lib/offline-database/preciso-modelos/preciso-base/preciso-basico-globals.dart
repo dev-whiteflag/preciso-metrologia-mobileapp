@@ -20,7 +20,7 @@ final enderecoFormController = TextEditingController();
 final cidadeEstadoFormController = TextEditingController();
 final equipFormController = TextEditingController();
 
-// -- Adicionais
+// -- Adicionais I
 final localFormController = TextEditingController();
 final tempEndFormController = TextEditingController();
 final umidadeEndFormController = TextEditingController();
@@ -33,7 +33,7 @@ final numeroSerieFormController = TextEditingController();
 final identificacaoFormController = TextEditingController();
 var instrumentoTipo;
 
-// -- VidrariaGraduada
+// -- Adicional II
 final pressaoFormController = TextEditingController();
 final volumeFormController = TextEditingController();
 final faixaStartFormController = TextEditingController();
@@ -42,146 +42,23 @@ final divisaoFormController = TextEditingController();
 final escalaStartFormController = TextEditingController();
 final escalaEndFormController = TextEditingController();
 
-// -- Instrumento Ambiente - IN
+// -- Temperatura IN
 final escalaStartTempInFormController = TextEditingController();
 final escalaEndTempInFormController = TextEditingController();
 final faixaStartTempInFormController = TextEditingController();
 final faixaEndTempInFormController = TextEditingController();
 final divisaoTempInFormController = TextEditingController();
 
-// -- Instrumento Ambiente - OUT
+// -- Temperatura OUT
 final escalaStartTempOutFormController = TextEditingController();
 final escalaEndTempOutFormController = TextEditingController();
 final faixaStartTempOutFormController = TextEditingController();
 final faixaEndTempOutFormController = TextEditingController();
 final divisaoTempOutFormController = TextEditingController();
 
-// -- Instrumento Ambiente - UR
+// -- Umidade Relativa
 final escalaStartURFormController = TextEditingController();
 final escalaEndURFormController = TextEditingController();
 final faixaStartURFormController = TextEditingController();
 final faixaEndURFormController = TextEditingController();
 final divisaoURFormController = TextEditingController();
-
-// -- Dados Brutos - Primeira Leitura
-final vcc11FormController = TextEditingController();
-final vcc1Vii11FormController = TextEditingController();
-final vcc1Vii21FormController = TextEditingController();
-final vcc1Vii31FormController = TextEditingController();
-final vcc1Vii41FormController = TextEditingController();
-final vcc1Vii51FormController = TextEditingController();
-final vcc11IncertezaFormController = TextEditingController();
-
-final vcc21FormController = TextEditingController();
-final vcc2Vii11FormController = TextEditingController();
-final vcc2Vii21FormController = TextEditingController();
-final vcc2Vii31FormController = TextEditingController();
-final vcc2Vii41FormController = TextEditingController();
-final vcc2Vii51FormController = TextEditingController();
-final vcc21IncertezaFormController = TextEditingController();
-
-final vcc31FormController = TextEditingController();
-final vcc3Vii11FormController = TextEditingController();
-final vcc3Vii21FormController = TextEditingController();
-final vcc3Vii31FormController = TextEditingController();
-final vcc3Vii41FormController = TextEditingController();
-final vcc3Vii51FormController = TextEditingController();
-final vcc31IncertezaFormController = TextEditingController();
-
-final vcc41FormController = TextEditingController();
-final vcc4Vii11FormController = TextEditingController();
-final vcc4Vii21FormController = TextEditingController();
-final vcc4Vii31FormController = TextEditingController();
-final vcc4Vii41FormController = TextEditingController();
-final vcc4Vii51FormController = TextEditingController();
-final vcc41IncertezaFormController = TextEditingController();
-
-final vcc51FormController = TextEditingController();
-final vcc5Vii11FormController = TextEditingController();
-final vcc5Vii21FormController = TextEditingController();
-final vcc5Vii31FormController = TextEditingController();
-final vcc5Vii41FormController = TextEditingController();
-final vcc5Vii51FormController = TextEditingController();
-final vcc51IncertezaFormController = TextEditingController();
-
-// -- Dados Brutos - Segunda Leitura
-final vcc12FormController = TextEditingController();
-final vcc1Vii12FormController = TextEditingController();
-final vcc1Vii22FormController = TextEditingController();
-final vcc1Vii32FormController = TextEditingController();
-final vcc1Vii42FormController = TextEditingController();
-final vcc1Vii52FormController = TextEditingController();
-final vcc12IncertezaFormController = TextEditingController();
-
-final vcc22FormController = TextEditingController();
-final vcc2Vii12FormController = TextEditingController();
-final vcc2Vii22FormController = TextEditingController();
-final vcc2Vii32FormController = TextEditingController();
-final vcc2Vii42FormController = TextEditingController();
-final vcc2Vii52FormController = TextEditingController();
-final vcc22IncertezaFormController = TextEditingController();
-
-final vcc32FormController = TextEditingController();
-final vcc3Vii12FormController = TextEditingController();
-final vcc3Vii22FormController = TextEditingController();
-final vcc3Vii32FormController = TextEditingController();
-final vcc3Vii42FormController = TextEditingController();
-final vcc3Vii52FormController = TextEditingController();
-final vcc32IncertezaFormController = TextEditingController();
-
-final vcc42FormController = TextEditingController();
-final vcc4Vii12FormController = TextEditingController();
-final vcc4Vii22FormController = TextEditingController();
-final vcc4Vii32FormController = TextEditingController();
-final vcc4Vii42FormController = TextEditingController();
-final vcc4Vii52FormController = TextEditingController();
-final vcc42IncertezaFormController = TextEditingController();
-
-final vcc52FormController = TextEditingController();
-final vcc5Vii12FormController = TextEditingController();
-final vcc5Vii22FormController = TextEditingController();
-final vcc5Vii32FormController = TextEditingController();
-final vcc5Vii42FormController = TextEditingController();
-final vcc5Vii52FormController = TextEditingController();
-final vcc52IncertezaFormController = TextEditingController();
-
-// -- Dados Brutos - Terceira Leitura
-final vcc13FormController = TextEditingController();
-final vcc1Vii13FormController = TextEditingController();
-final vcc1Vii23FormController = TextEditingController();
-final vcc1Vii33FormController = TextEditingController();
-final vcc1Vii43FormController = TextEditingController();
-final vcc1Vii53FormController = TextEditingController();
-final vcc13IncertezaFormController = TextEditingController();
-
-final vcc23FormController = TextEditingController();
-final vcc2Vii13FormController = TextEditingController();
-final vcc2Vii23FormController = TextEditingController();
-final vcc2Vii33FormController = TextEditingController();
-final vcc2Vii43FormController = TextEditingController();
-final vcc2Vii53FormController = TextEditingController();
-final vcc23IncertezaFormController = TextEditingController();
-
-final vcc33FormController = TextEditingController();
-final vcc3Vii13FormController = TextEditingController();
-final vcc3Vii23FormController = TextEditingController();
-final vcc3Vii33FormController = TextEditingController();
-final vcc3Vii43FormController = TextEditingController();
-final vcc3Vii53FormController = TextEditingController();
-final vcc33IncertezaFormController = TextEditingController();
-
-final vcc43FormController = TextEditingController();
-final vcc4Vii13FormController = TextEditingController();
-final vcc4Vii23FormController = TextEditingController();
-final vcc4Vii33FormController = TextEditingController();
-final vcc4Vii43FormController = TextEditingController();
-final vcc4Vii53FormController = TextEditingController();
-final vcc43IncertezaFormController = TextEditingController();
-
-final vcc53FormController = TextEditingController();
-final vcc5Vii13FormController = TextEditingController();
-final vcc5Vii23FormController = TextEditingController();
-final vcc5Vii33FormController = TextEditingController();
-final vcc5Vii43FormController = TextEditingController();
-final vcc5Vii53FormController = TextEditingController();
-final vcc53IncertezaFormController = TextEditingController();
