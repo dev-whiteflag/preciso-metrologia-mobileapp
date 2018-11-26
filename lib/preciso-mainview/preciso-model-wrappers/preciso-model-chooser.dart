@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-manometro/preciso-manometro-cert-info.dart';
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-5.dart';
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-10.dart';
 
 //---------------------------------------------------------------------------------//
 var selectionTipo = '0';
@@ -14,7 +15,8 @@ List<Map> precisoTipoInstrumento = [
   {"id": 0, "text": "Selecione um Tipo de Instrumento"},
   {"id": 1, "text": "Termohigrômetro"},
   {"id": 2, "text": "Vidraria Graduada"},
-  {"id": 3, "text": "Medidores de Pressão"},
+  {"id": 3, "text": "Medidor de Pressão - 5 Leituras"},
+  {"id": 4, "text": "Medidor de Pressão - 10 Leituras"},
 ];
 
 List<Map> precisoInstrumentoTermohigrometro = [
@@ -91,7 +93,11 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
         break;
 
       case '3':
-        return PrecisoManometroCertInfo();
+        return PrecisoMedidorPressao5CertInfo();
+        break;
+
+      case '4':
+        return PrecisoMedidorPressao5CertInfo();
         break;
 
       default:
@@ -138,7 +144,7 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
                     selectedFModel = newValue;
                     selectionInstrumento = '0';
                   });
-                  
+
                   updateWrapper();
                   print("Tipo de Instrumento: " + selectionTipo);
                 },

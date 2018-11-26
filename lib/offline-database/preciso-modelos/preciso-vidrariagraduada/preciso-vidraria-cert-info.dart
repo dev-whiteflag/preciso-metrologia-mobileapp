@@ -157,7 +157,7 @@ class PrecisoVidrariaCertInfo extends StatelessWidget {
                                     margin: EdgeInsets.only(
                                         right: 5.0, bottom: 5.0),
                                     child: TextFormField(
-                                      controller: vidariaVII1FormController,
+                                      controller: vidrariaVII1FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -246,7 +246,7 @@ class PrecisoVidrariaCertInfo extends StatelessWidget {
                                     margin: EdgeInsets.only(
                                         right: 5.0, bottom: 5.0),
                                     child: TextFormField(
-                                      controller: vidariaVII2FormController,
+                                      controller: vidrariaVII2FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -335,7 +335,7 @@ class PrecisoVidrariaCertInfo extends StatelessWidget {
                                     margin: EdgeInsets.only(
                                         right: 5.0, bottom: 5.0),
                                     child: TextFormField(
-                                      controller: vidariaVII3FormController,
+                                      controller: vidrariaVII3FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -424,7 +424,7 @@ class PrecisoVidrariaCertInfo extends StatelessWidget {
                                     margin: EdgeInsets.only(
                                         right: 5.0, bottom: 5.0),
                                     child: TextFormField(
-                                      controller: vidariaVII4FormController,
+                                      controller: vidrariaVII4FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -509,7 +509,7 @@ class PrecisoVidrariaCertInfo extends StatelessWidget {
                                     margin:
                                         EdgeInsets.only(right: 5.0, top: 5.0),
                                     child: TextFormField(
-                                      controller: vidariaVII5FormController,
+                                      controller: vidrariaVII5FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
