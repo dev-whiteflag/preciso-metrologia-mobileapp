@@ -8,13 +8,10 @@ import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-varlist.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-varlist.dart';
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-padroes.dart';
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 //---------------------------------------------------------------------------------//
 var exportInstrumentoData;
-var exportRawData2 = {};
-var exportRawData3 = {};
 
 Map<String, dynamic> dataGeneral = {
   'Empresa':          empresaFormController.text,

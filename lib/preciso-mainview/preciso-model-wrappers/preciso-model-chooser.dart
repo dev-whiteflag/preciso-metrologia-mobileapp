@@ -163,7 +163,6 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
                 }).toList(),
               ),
             ),
-          isExpanded: true,
             Divider(),
             Container(
               margin: EdgeInsets.all(1.0),
@@ -194,7 +193,7 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
       Divider(),
       Column(children: <Widget>[
         Container(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.only(right: 10.0, left: 10.0, top: 10, bottom: 10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               border: Border.all(color: Colors.grey)),

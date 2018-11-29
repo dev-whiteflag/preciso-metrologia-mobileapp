@@ -25,6 +25,12 @@ List<Map> precisoInstrumentoPressaoClasse = [
   {"id": 8, "text": "D"},
 ];
 
+List<Map> precisoModelPadroes = [
+  {"id": 0, "text": "Nenhuma Padrão Especificado"},
+  {"id": 1, "text": "VOLSPA002 - Certificado RBC Nº 170504300"},
+  {"id": 2, "text": "ME-VOL-INSPAD-PROV001 - Certificado RBC N° 2676-11"},
+];
+
 class PrecisoMedidorPressao10CertInfo extends StatefulWidget {
   @override
   PrecisoMedidorPressao10CertInfoState createState() =>
@@ -292,6 +298,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -311,6 +318,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -330,6 +338,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -345,6 +354,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -373,6 +383,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -392,6 +403,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -411,6 +423,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -426,6 +439,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -454,6 +468,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 3",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -473,6 +488,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -492,6 +508,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -507,6 +524,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -535,6 +553,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 4",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -554,6 +573,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -573,6 +593,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -588,6 +609,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -616,6 +638,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 5",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -635,6 +658,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -654,6 +678,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -669,6 +694,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -697,6 +723,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 6",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -716,6 +743,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -735,6 +763,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -750,6 +779,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -778,6 +808,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 7",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -797,6 +828,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -816,6 +848,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -831,6 +864,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -859,6 +893,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 8",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -878,6 +913,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -897,6 +933,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -912,6 +949,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -940,6 +978,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 9",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -959,6 +998,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -978,6 +1018,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -993,6 +1034,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1021,6 +1063,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 10",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1040,6 +1083,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1059,6 +1103,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1074,6 +1119,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1120,6 +1166,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1139,6 +1186,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1158,6 +1206,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1173,6 +1222,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1201,6 +1251,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1220,6 +1271,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1239,6 +1291,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1254,6 +1307,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1282,6 +1336,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 3",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1301,6 +1356,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1320,6 +1376,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1335,6 +1392,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1363,6 +1421,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 4",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1382,6 +1441,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1401,6 +1461,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1416,6 +1477,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1444,6 +1506,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 5",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1463,6 +1526,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1482,6 +1546,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1497,6 +1562,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1525,6 +1591,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 6",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1544,6 +1611,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1563,6 +1631,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1578,6 +1647,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1606,6 +1676,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 7",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1625,6 +1696,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1644,6 +1716,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1659,6 +1732,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1687,6 +1761,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 8",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1706,6 +1781,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1725,6 +1801,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1740,6 +1817,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1768,6 +1846,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 9",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1787,6 +1866,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1806,6 +1886,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1821,6 +1902,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1849,6 +1931,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.I.I 10",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1868,6 +1951,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 1",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1887,6 +1971,7 @@ class PrecisoMedidorPressao10CertInfoState
                                       },
                                       decoration: InputDecoration(
                                         labelText: "V.V.C 2",
+                                        labelStyle: TextStyle(fontSize: 14),
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
@@ -1902,6 +1987,7 @@ class PrecisoMedidorPressao10CertInfoState
                               },
                               decoration: InputDecoration(
                                 labelText: "V.V.C 3",
+                                labelStyle: TextStyle(fontSize: 14),
                                 border: OutlineInputBorder(),
                               ),
                             )),
@@ -1909,6 +1995,85 @@ class PrecisoMedidorPressao10CertInfoState
                     ])),
               ],
             ),
+            Divider(),
+            Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(color: Colors.grey)),
+                child: Column(children: <Widget>[
+                  Container(
+                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: new DropdownButton<String>(
+                        isDense: false,
+                        isExpanded: true,
+                        hint: new Text("Selecione um Padrão"),
+                        value: selectionPadrao1,
+                        onChanged: (String newValue) {
+                          setState(() {
+                            selectionPadrao1 = newValue;
+                          });
+                          print("Padrão: " + selectionPadrao1);
+                        },
+                        items: precisoModelPadroes.map((Map map) {
+                          selectedPadrao1 = map["text"];
+                          return new DropdownMenuItem<String>(
+                            value: map["id"].toString(),
+                            child: new Text(
+                              map["text"],
+                            ),
+                          );
+                        }).toList(),
+                      )),
+                  Divider(),
+                  Container(
+                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: new DropdownButton<String>(
+                        isDense: false,
+                        isExpanded: true,
+                        hint: new Text("Selecione um Padrão"),
+                        value: selectionPadrao2,
+                        onChanged: (String newValue) {
+                          setState(() {
+                            selectionPadrao2 = newValue;
+                          });
+                          print("Padrão: " + selectionPadrao2);
+                        },
+                        items: precisoModelPadroes.map((Map map) {
+                          selectedPadrao2 = map["text"];
+                          return new DropdownMenuItem<String>(
+                            value: map["id"].toString(),
+                            child: new Text(
+                              map["text"],
+                            ),
+                          );
+                        }).toList(),
+                      )),
+                  Divider(),
+                  Container(
+                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: new DropdownButton<String>(
+                        isDense: false,
+                        isExpanded: true,
+                        hint: new Text("Selecione um Padrão"),
+                        value: selectionPadrao3,
+                        onChanged: (String newValue) {
+                          setState(() {
+                            selectionPadrao3 = newValue;
+                          });
+                          print("Padrão: " + selectionPadrao3);
+                        },
+                        items: precisoModelPadroes.map((Map map) {
+                          selectedPadrao3 = map["text"];
+                          return new DropdownMenuItem<String>(
+                            value: map["id"].toString(),
+                            child: new Text(
+                              map["text"],
+                            ),
+                          );
+                        }).toList(),
+                      )),
+                ]))
           ],
         ));
   }

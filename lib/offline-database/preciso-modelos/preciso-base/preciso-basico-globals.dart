@@ -11,6 +11,12 @@ var selectionGrandeza = '0';
 var selectedGrandeza = '0';
 var selectionClasse = '0';
 var selectedClasse = '0';
+var selectionPadrao1 = '0';
+var selectionPadrao2 = '0';
+var selectionPadrao3 = '0';
+var selectedPadrao1 = '0';
+var selectedPadrao2 = '0';
+var selectedPadrao3 = '0';
 
 // TextControllers
 

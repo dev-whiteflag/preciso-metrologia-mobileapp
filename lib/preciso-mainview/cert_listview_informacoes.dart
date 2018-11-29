@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-end-data.dart';
 import 'package:precisometrologia_app/preciso-mainview/preciso-mainview-header.dart';
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-padroes.dart';
 //---------------------------------------------------------------------------------//
 
 class PrecisoMainListView extends StatelessWidget {
@@ -25,11 +24,6 @@ class PrecisoMainListView extends StatelessWidget {
                     margin:
                         EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
                     child: PrecisoBasicInfo()),
-                Divider(),
-                Container(
-                    margin:
-                        EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
-                    child: PrecisoBasePadroesDropdown()),
                 Divider(),
                 Container(
                     margin:
