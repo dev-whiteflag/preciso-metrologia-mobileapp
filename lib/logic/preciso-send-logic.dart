@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:intl/intl.dart';
 
 import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
@@ -102,6 +103,9 @@ Future<Null> sendFirebaseData(var selectedModel) async {
     exportInstrumentoData = returnActiveInstrument();
     var certID = await getIDCertificado();
 
+    var dateTime = new DateTime.now();
+    var nowHour = new DateFormat('kk:mm:ss').format(dateTime);
+
       Map<String, dynamic> dataHeader = {
         'ID':                certID,
         'PrecisoID':         getPrecisoID(),
@@ -109,6 +113,7 @@ Future<Null> sendFirebaseData(var selectedModel) async {
         'Ano':               nowYear,
         'Data de Calibração': (nowDay + "/" + nowMonth + "/" + nowYear),
         'Incremental':       savedIncremental,
+        'Hora do Envio':     nowHour,
         };
 
       Map<String, dynamic> finalDataMap = {}..addAll(dataGeneral)..addAll(exportInstrumentoData)

@@ -238,6 +238,8 @@ class PrecisoMedidorPressao10CertInfoState
                   ),
                 )),
             Divider(),
+
+            // -------------------------------------------------------- DADOS BRUTOS ------------------------------------------------------------- //
             Column(
               children: <Widget>[
                 Container(
@@ -249,37 +251,37 @@ class PrecisoMedidorPressao10CertInfoState
                       style: TextStyle(
                           fontWeight: FontWeight.w200, fontSize: 20.0),
                     )),
-                // DADOS: CALIBRAÇÃO
+
+                // ------------------------------- Calibração: Carrego ----------------------------------- //
                 Container(
-                  padding: EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(color: Colors.grey)),
-                  child: Column(children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10.0),
-                      child: Text("Calibração: Carrego",
-                          overflow: TextOverflow.clip,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15.0,
-                              color: Colors.green)),
-                    ),
-                    //DADOS: V.I.I 1
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
+                    // - Primeiro Container Gráfico - //
+                    padding: EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        border: Border.all(color: Colors.grey)),
+                    child: Column(children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10.0),
+                        child: Text("Calibração: Carrego",
+                            overflow: TextOverflow.clip,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.0,
+                                color: Colors.green)),
+                      ),
+                      Container(
+                          // - V.I.I 1 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII1FormController,
+                                      controller:
+                                          pressaoL10C1VII1FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -293,82 +295,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R1VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R1VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C1R1VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.I.I 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    //DADOS: V.I.I 2
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII2FormController,
+                                      controller:
+                                          pressaoL10C1R1VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R1VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R1VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 2 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII2FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -382,82 +376,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R2VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R2VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C1R2VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    //DADOS: V.I.I 3
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII3FormController,
+                                      controller:
+                                          pressaoL10C1R2VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R2VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R2VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 3 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII3FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -471,82 +457,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R3VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.C.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.C.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R3VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.C.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.C.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C1R3VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.C.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.C.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    // V.V.C 4
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII4FormController,
+                                      controller:
+                                          pressaoL10C1R3VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R3VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R3VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 4 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII4FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -560,78 +538,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R4VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R4VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C1R4VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          )
-                        ])),
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin:
-                                        EdgeInsets.only(right: 5.0, top: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII5FormController,
+                                      controller:
+                                          pressaoL10C1R4VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R4VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R4VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 5 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII5FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -645,103 +619,497 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R5VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C1R5VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C1R5VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          )
-                        ])),
-                  ]),
-                ),
-                Divider(),
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                // DADOS: CALIBRAÇÃO
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(color: Colors.grey)),
-                  child: Column(children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10.0),
-                      child: Text("Calibração: Descarrego",
-                          overflow: TextOverflow.clip,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15.0,
-                              color: Colors.green)),
-                    ),
-                    //DADOS: V.I.I 1
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII5FormController,
+                                      controller:
+                                          pressaoL10C1R5VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R5VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R5VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 6 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII6FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 6";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 6",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R6VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R6VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R6VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 7 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII7FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 7";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 7",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R7VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R7VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R7VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 8 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII8FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 8";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 8",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R8VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R8VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R8VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 9 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII9FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 9";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 9",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R9VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R9VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R9VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 10 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII10FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 10";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 10",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R10VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1R10VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C1R10VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ]))
+                    ])),
+                Divider(),
+                // ----------------------------- Calibração: Descarrego --------------------------------- //
+                Container(
+                    // - Primeiro Container Gráfico - //
+                    padding: EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        border: Border.all(color: Colors.grey)),
+                    child: Column(children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10.0),
+                        child: Text("Calibração: Descarrego",
+                            overflow: TextOverflow.clip,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.0,
+                                color: Colors.green)),
+                      ),
+                      Container(
+                          // - V.I.I 1 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII10FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -755,82 +1123,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R1VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R1VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C2R1VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.I.I 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    //DADOS: V.I.I 2
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII4FormController,
+                                      controller:
+                                          pressaoL10C2R1VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R1VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R1VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 2 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII9FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -844,82 +1204,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R2VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R2VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C2R2VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    //DADOS: V.I.I 3
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII3FormController,
+                                      controller:
+                                          pressaoL10C2R2VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R2VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R2VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 3 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII8FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -933,82 +1285,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          // Linha 2
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R3VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.C.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.C.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R3VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.C.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.C.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C2R3VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.C.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.C.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          ),
-                        ])),
-                    Divider(),
-                    // V.V.C 4
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          // Linha 1
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin: EdgeInsets.only(
-                                        right: 5.0, bottom: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII2FormController,
+                                      controller:
+                                          pressaoL10C2R3VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R3VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R3VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 4 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII7FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -1022,78 +1366,74 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R4VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R4VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C2R4VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          )
-                        ])),
-                    Container(
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(children: <Widget>[
-                          Row(children: <Widget>[
                             Expanded(
                                 child: Container(
-                                    margin:
-                                        EdgeInsets.only(right: 5.0, top: 5.0),
+                                    margin: EdgeInsets.only(right: 5.0),
                                     child: TextFormField(
-                                      controller: pressaoL5C1VII1FormController,
+                                      controller:
+                                          pressaoL10C2R4VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R4VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R4VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 5 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII6FormController,
                                       textCapitalization:
                                           TextCapitalization.none,
                                       keyboardType: TextInputType.number,
@@ -1107,68 +1447,466 @@ class PrecisoMedidorPressao10CertInfoState
                                         border: OutlineInputBorder(),
                                       ),
                                     ))),
-                          ]),
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R5VCC1FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 1";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 1",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: Container(
-                                      margin: EdgeInsets.only(right: 5.0),
-                                      child: TextFormField(
-                                        controller:
-                                            pressaoL5C2R5VCC2FormController,
-                                        textCapitalization:
-                                            TextCapitalization.none,
-                                        keyboardType: TextInputType.number,
-                                        validator: (value) {
-                                          if (value.isEmpty) {
-                                            return "Insira o V.V.C 2";
-                                          }
-                                        },
-                                        decoration: InputDecoration(
-                                          labelText: "V.V.C 2",
-                                          border: OutlineInputBorder(),
-                                        ),
-                                      ))),
-                              Expanded(
-                                  child: TextFormField(
-                                controller: pressaoL5C2R5VCC3FormController,
-                                textCapitalization: TextCapitalization.none,
-                                keyboardType: TextInputType.number,
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return "Insira o V.V.C 3";
-                                  }
-                                },
-                                decoration: InputDecoration(
-                                  labelText: "V.V.C 3",
-                                  border: OutlineInputBorder(),
-                                ),
-                              )),
-                            ],
-                          )
-                        ])),
-                  ]),
-                ),
-                Divider(),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R5VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R5VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R5VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 6 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII5FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 6";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 6",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R6VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R6VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R6VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 7 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII4FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 7";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 7",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R7VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R7VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R7VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 8 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII3FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 8";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 8",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R8VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R8VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R8VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 9 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 9";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 9",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R9VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R9VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R9VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ])),
+                      Divider(),
+                      Container(
+                          // - V.I.I 10 - //
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              border: Border.all(color: Colors.grey)),
+                          child: Row(children: <Widget>[
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C1VII1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.I.I 10";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.I.I 10",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R10VCC1FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 1";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 1",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5.0),
+                                    child: TextFormField(
+                                      controller:
+                                          pressaoL10C2R10VCC2FormController,
+                                      textCapitalization:
+                                          TextCapitalization.none,
+                                      keyboardType: TextInputType.number,
+                                      validator: (value) {
+                                        if (value.isEmpty) {
+                                          return "Insira o V.V.C 2";
+                                        }
+                                      },
+                                      decoration: InputDecoration(
+                                        labelText: "V.V.C 2",
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ))),
+                            Expanded(
+                                child: TextFormField(
+                              controller: pressaoL10C2R10VCC3FormController,
+                              textCapitalization: TextCapitalization.none,
+                              keyboardType: TextInputType.number,
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return "Insira o V.V.C 3";
+                                }
+                              },
+                              decoration: InputDecoration(
+                                labelText: "V.V.C 3",
+                                border: OutlineInputBorder(),
+                              ),
+                            )),
+                          ]))
+                    ])),
               ],
             ),
           ],

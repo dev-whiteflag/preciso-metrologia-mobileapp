@@ -30,7 +30,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: empresaFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -47,7 +46,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: enderecoFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -64,7 +62,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: cidadeEstadoFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -95,6 +92,7 @@ class PrecisoBasicInfo extends StatelessWidget {
                 )),
               ])),
           Divider(),
+
           Container(
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
@@ -113,7 +111,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: marcaFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -130,7 +127,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: modeloFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -148,7 +144,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                 Container(
                     margin: EdgeInsets.only(bottom: 10.0),
                     child: TextFormField(
-                      autovalidate: true,
                       controller: numeroSerieFormController,
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.text,
@@ -164,7 +159,6 @@ class PrecisoBasicInfo extends StatelessWidget {
                     )),
                 Container(
                     child: TextFormField(
-                  autovalidate: true,
                   controller: identificacaoFormController,
                   textCapitalization: TextCapitalization.words,
                   keyboardType: TextInputType.text,
@@ -178,8 +172,9 @@ class PrecisoBasicInfo extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 )),
-                PrecisoModelDropdown(),
-              ]))
+              ])),
+              Divider(),
+              PrecisoModelDropdown(),
         ],
       ),
     );
