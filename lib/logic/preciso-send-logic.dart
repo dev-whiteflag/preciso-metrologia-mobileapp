@@ -8,10 +8,8 @@ import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-varlist.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-varlist.dart';
-import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 //---------------------------------------------------------------------------------//
-var exportInstrumentoData;
 
 Map<String, dynamic> dataGeneral = {
   'Empresa':          empresaFormController.text,
@@ -62,7 +60,7 @@ Map<String, dynamic> dataPadrao = {
   'Padrão 3':          selectedPadrao3,
 };
 
-returnActiveInstrument(){
+Map<String, dynamic> returnActiveInstrument(){
   switch (selectedModel){
         case '1':
         return dataTermohigrometro;
@@ -97,8 +95,8 @@ checkInternetConnection() async{
 Future<Null> sendFirebaseData(var selectedModel) async {
     
     Firestore.instance.enablePersistence(true);
-    exportInstrumentoData = returnActiveInstrument();
     var certID = await getIDCertificado();
+    var exportedInstrumentData = returnActiveInstrument();
 
     var dateTime = new DateTime.now();
     var nowHour = new DateFormat('kk:mm:ss').format(dateTime);
@@ -113,7 +111,7 @@ Future<Null> sendFirebaseData(var selectedModel) async {
         'Hora do Envio':     nowHour,
         };
 
-      Map<String, dynamic> finalDataMap = {}..addAll(dataGeneral)..addAll(exportInstrumentoData)
+      Map<String, dynamic> finalDataMap = {}..addAll(dataGeneral)..addAll(exportedInstrumentData)
                                           ..addAll(dataInstrumento)..addAll(dataPadrao)
                                           ..addAll(dataAdicional)..addAll(dataHeader);
 

@@ -66,7 +66,7 @@ class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader> {
             child: OutlineButton(
                 onPressed: () {
                   returnWifiStatus();
-                  sendFirebaseData(selectedFModel);
+                  sendFirebaseData(selectedModel);
                   _update();
                 },
                 child: Container(

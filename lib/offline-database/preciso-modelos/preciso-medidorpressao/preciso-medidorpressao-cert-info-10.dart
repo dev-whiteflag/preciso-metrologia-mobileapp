@@ -2016,7 +2016,6 @@ class PrecisoMedidorPressao10CertInfoState
                           print("Padrão: " + selectionPadrao1);
                         },
                         items: precisoModelPadroes.map((Map map) {
-                          selectedPadrao1 = map["text"];
                           return new DropdownMenuItem<String>(
                             value: map["id"].toString(),
                             child: new Text(
@@ -2040,7 +2039,6 @@ class PrecisoMedidorPressao10CertInfoState
                           print("Padrão: " + selectionPadrao2);
                         },
                         items: precisoModelPadroes.map((Map map) {
-                          selectedPadrao2 = map["text"];
                           return new DropdownMenuItem<String>(
                             value: map["id"].toString(),
                             child: new Text(
@@ -2064,7 +2062,6 @@ class PrecisoMedidorPressao10CertInfoState
                           print("Padrão: " + selectionPadrao3);
                         },
                         items: precisoModelPadroes.map((Map map) {
-                          selectedPadrao3 = map["text"];
                           return new DropdownMenuItem<String>(
                             value: map["id"].toString(),
                             child: new Text(

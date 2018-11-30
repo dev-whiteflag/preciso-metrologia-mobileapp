@@ -1,12 +1,11 @@
 // ------------------------------------------------------------------------- //
 import 'package:flutter/material.dart';
 // ------------------------------------------------------------------------ //
-import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-5.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-10.dart';
-
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
 //---------------------------------------------------------------------------------//
 var selectionTipo = '0';
 var selectionInstrumento = '0';
@@ -147,7 +146,7 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
                 onChanged: (String newValue) {
                   setState(() {
                     selectionTipo = newValue;
-                    selectedFModel = newValue;
+                    selectedModel = newValue;
                     selectionInstrumento = '0';
                   });
                   updateWrapper();

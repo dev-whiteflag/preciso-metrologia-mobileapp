@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 //---------------------------------------------------------------------------------//
 
 var selectedModel = '0';
+var selectedInstrumento = '0';
 var selectionGrandeza = '0';
 var selectedGrandeza = '0';
 var selectionClasse = '0';
