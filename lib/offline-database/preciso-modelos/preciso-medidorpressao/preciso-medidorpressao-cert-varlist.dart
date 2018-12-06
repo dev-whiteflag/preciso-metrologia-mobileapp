@@ -12,7 +12,8 @@ import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-b
 // DataMap for pressao
 Map<String, dynamic> dataMapPrecisoMedidorPressao5Leituras = {
   'Tipo de Instrumento': "Medidor de Pressão - 5 Leituras",
-  'Grandeza': selectedGrandeza,
+  'IDTipo': "R101180813F",
+  'Unidade': selectedGrandeza,
   'Classe': selectedClasse,
   'Instrumento': selectedInstrumento,
   'Inicio de Escala': escalaStartFormController.text,
@@ -64,7 +65,8 @@ Map<String, dynamic> dataMapPrecisoMedidorPressao5Leituras = {
 
 Map<String, dynamic> dataMapPrecisoMedidorPressao10Leituras = {
   'Tipo de Instrumento': "Medidor de Pressão - 10 Leituras",
-  'Grandeza': selectedGrandeza,
+  'IDTipo': "R101181123A",
+  'Unidade': selectedGrandeza,
   'Classe': selectedClasse,
   'Instrumento': selectedInstrumento,
   'Inicio de Escala': escalaStartFormController.text,

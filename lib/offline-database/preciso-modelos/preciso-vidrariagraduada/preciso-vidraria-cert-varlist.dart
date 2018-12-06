@@ -11,8 +11,9 @@ import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-b
 // DataMap for Vidraria
 Map<String, dynamic> dataMapPrecisoVidrariaGraduada = {
   'Tipo de Instrumento':                              "Vidraria Graduada",
-  'Grandeza':                                          "uL",
+  'Unidade':                                          "uL",
   'Instrumento':                                       selectedInstrumento,
+  'IDTipo':                                            "R100180915F",
 
   'Inicio da Faixa de Uso':                            faixaStartFormController.text,
   'Final da Faixa de Uso':                             faixaEndFormController.text,

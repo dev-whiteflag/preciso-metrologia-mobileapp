@@ -1,11 +1,12 @@
 // ------------------------------------------------------------------------- //
 import 'package:flutter/material.dart';
 // ------------------------------------------------------------------------ //
-import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basic-cert-info.dart';
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-termohigrometro/preciso-termohigrometro-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-info.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-5.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-info-10.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
+
 //---------------------------------------------------------------------------------//
 var selectionTipo = '0';
 var selectionInstrumento = '0';
@@ -20,7 +21,7 @@ List<Map> precisoTipoInstrumento = [
 
 List<Map> precisoInstrumentoTermohigrometro = [
   {"id": 0, "text": "Selecione um Termohigrômetro"},
-  {"id": 1, "text": "Termohigrômetro com Sensor Interno e Externo"},
+  {"id": 1, "text": "Incluso Sensor Interno e Externo"},
 ];
 
 List<Map> precisoInstrumentoVidrariaGraduada = [
@@ -72,18 +73,23 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
       case '0':
         return Column(children: <Widget>[
           Container(
-            margin: EdgeInsets.only(left: 5.0, right: 5.0),
-            child: Text(
-              'Selecione um Instrumento',
-              overflow: TextOverflow.clip,
-              style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20.0),
-            ),
-          ),
+              margin: EdgeInsets.only(left: 10.0, right: 10.0),
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                    margin: EdgeInsets.only(right: 5.0),
+                    child: Icon(Icons.info)),
+                Text(
+                  'Nenhum Instrumento Selecionado',
+                  overflow: TextOverflow.clip,
+                  style: TextStyle(fontWeight: FontWeight.w200, fontSize: 20.0),
+                ),
+              ])),
         ]);
         break;
 
       case '1':
-        return PrecisoBasicCertInfo();
+        return PrecisoTermohigrometroCertInfo();
         break;
 
       case '2':
@@ -96,10 +102,6 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
 
       case '4':
         return PrecisoMedidorPressao10CertInfo();
-        break;
-
-      default:
-        return PrecisoBasicCertInfo();
         break;
     }
   }
@@ -192,7 +194,8 @@ class PrecisoModelDropdownState extends State<PrecisoModelDropdown> {
       Divider(),
       Column(children: <Widget>[
         Container(
-          padding: EdgeInsets.only(right: 10.0, left: 10.0, top: 10, bottom: 10),
+          padding:
+              EdgeInsets.only(right: 10.0, left: 10.0, top: 10, bottom: 10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               border: Border.all(color: Colors.grey)),

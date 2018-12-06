@@ -148,6 +148,7 @@ class PrecisoMedidorPressao10CertInfoState
                   },
                   decoration: InputDecoration(
                     labelText: "Inicio da Escala",
+                    labelStyle: TextStyle(fontSize: 14),
                     suffixText: fetchGrandeza(),
                     border: OutlineInputBorder(),
                   ),
@@ -173,6 +174,7 @@ class PrecisoMedidorPressao10CertInfoState
                   },
                   decoration: InputDecoration(
                     labelText: "Final da Escala",
+                    labelStyle: TextStyle(fontSize: 14),
                     suffixText: fetchGrandeza(),
                     border: OutlineInputBorder(),
                   ),
@@ -194,6 +196,7 @@ class PrecisoMedidorPressao10CertInfoState
                   },
                   decoration: InputDecoration(
                     labelText: "Inicio da Faixa de Uso",
+                    labelStyle: TextStyle(fontSize: 14),
                     suffixText: fetchGrandeza(),
                     border: OutlineInputBorder(),
                   ),
@@ -219,6 +222,7 @@ class PrecisoMedidorPressao10CertInfoState
                   },
                   decoration: InputDecoration(
                     labelText: "Final da Faixa de Uso",
+                    labelStyle: TextStyle(fontSize: 14),
                     suffixText: fetchGrandeza(),
                     border: OutlineInputBorder(),
                   ),
@@ -239,6 +243,7 @@ class PrecisoMedidorPressao10CertInfoState
                   },
                   decoration: InputDecoration(
                     labelText: "Valor de uma Divisão",
+                    labelStyle: TextStyle(fontSize: 14),
                     suffixText: fetchGrandeza(),
                     border: OutlineInputBorder(),
                   ),

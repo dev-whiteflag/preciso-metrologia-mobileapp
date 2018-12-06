@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 
 import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
+import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-termohigrometro/preciso-termohigrometro-cert-varlist.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-medidorpressao/preciso-medidorpressao-cert-varlist.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-vidrariagraduada/preciso-vidraria-cert-varlist.dart';
 import 'package:precisometrologia_app/offline-database/preciso-modelos/preciso-base/preciso-basico-globals.dart';
@@ -33,27 +34,6 @@ Map<String, dynamic> dataInstrumento = {
   'Classe do Instrumento':                      instrumentoTipo,
 };
 
-Map<String, dynamic> dataTermohigrometro = {
-  'Tipo de Instrumento':                              "Termohigrometro",
-  'Grandeza':                                          "°C",
-  'Instrumento':                                      selectedInstrumento,
-  'Temperatura de Entrada - Inicio de Escala':        escalaStartTempInFormController.text,
-  'Temperatura de Entrada - Final de Escala':         escalaEndTempInFormController.text,
-  'Temperatura de Entrada - Inicio da Faixa de Uso':  faixaStartTempInFormController.text,
-  'Temperatura de Entrada - Final da Faixa de Uso':   faixaEndTempInFormController.text,
-  'Temperatura de Entrada - Valor de uma Divisão':    divisaoTempInFormController.text,
-  'Temperatura de Saida - Inicio de Escala':          escalaStartTempOutFormController.text,
-  'Temperatura de Saida - Final de Escala':           escalaEndTempOutFormController.text,
-  'Temperatura de Saida - Inicio da Faixa de Uso':    faixaStartTempOutFormController.text,
-  'Temperatura de Saida - Final da Faixa de Uso':     faixaEndTempOutFormController.text,
-  'Temperatura de Saida - Valor de uma Divisão':      divisaoTempOutFormController.text,
-  'Umidade Relativa - Inicio de Escala':              escalaStartURFormController.text,
-  'Umidade Relativa - Final de Escala':               escalaEndURFormController.text,
-  'Umidade Relativa - Inicio da Faixa de Uso':        faixaStartURFormController.text,
-  'Umidade Relativa - Final da Faixa de Uso':         faixaEndURFormController.text,
-  'Umidade Relativa - Valor de uma Divisão':          divisaoURFormController.text,
-};
-
 Map<String, dynamic> dataPadrao = {
   'Padrão 1':          selectedPadrao1,
   'Padrão 2':          selectedPadrao2,
@@ -63,8 +43,20 @@ Map<String, dynamic> dataPadrao = {
 Map<String, dynamic> returnActiveInstrument(){
   switch (selectedModel){
         case '1':
-        return dataTermohigrometro;
+
+          switch (selectionLeitura) {
+            case '1':
+              return dataMapPrecisoTermohigrometro1Leitura;
+              break;
+            case '2':
+              return dataMapPrecisoTermohigrometro2Leitura;
+              break;
+            case '3':
+              return dataMapPrecisoTermohigrometro3Leitura;
+              break;
+          }
         break;
+
         case '2':
         return dataMapPrecisoVidrariaGraduada;
         break;
@@ -115,6 +107,6 @@ Future<Null> sendFirebaseData(var selectedModel) async {
                                           ..addAll(dataInstrumento)..addAll(dataPadrao)
                                           ..addAll(dataAdicional)..addAll(dataHeader);
 
-      await Firestore.instance.collection('preciso-certificados').document((certID.toString()))
+      Firestore.instance.collection('preciso-certificados').document((certID.toString()))
           .setData(finalDataMap);
 }
