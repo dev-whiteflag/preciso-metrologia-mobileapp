@@ -59,7 +59,7 @@ class LoginAuth{
   var isLoggedIn = false;
   
   Future<FirebaseUser> handleSignInEmail(String email, String password) async {
-
+    try{
     final FirebaseUser user = await auth.signInWithEmailAndPassword(email: email, password: password);
 
     assert(user != null);
@@ -71,7 +71,9 @@ class LoginAuth{
     print('signInEmail succeeded: $user');
     isLoggedIn = true;
     return user;
-
+    } on PlatformException catch(e){
+      print(e);
+    } 
   }
 
 Future<FirebaseUser> handleSignUp(email, password) async {

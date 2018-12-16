@@ -85,7 +85,7 @@ class PrecisoLoginScreen extends StatelessWidget {
                             OutlineButton(
                                 color: Colors.blue,
                                 onPressed: () {
-                                  if (LoginAuth().isLoggedIn == true) {
+                                  if (LoginAuth().isLoggedIn == false) {
                                     LoginAuth().handleSignInEmail(
                                         emailFormController.text,
                                         passwordFormController.text);

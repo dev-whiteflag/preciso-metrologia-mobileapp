@@ -1,5 +1,5 @@
-cloud_firestore=C:\\Development\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-0.8.0\\
-device_info=C:\\Development\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\device_info-0.2.1\\
-firebase_auth=C:\\Development\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-0.5.20\\
-firebase_core=C:\\Development\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-0.2.5\\
-shared_preferences=C:\\Development\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.4.3\\
+cloud_firestore=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\cloud_firestore-0.8.2+3\\
+device_info=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\device_info-0.3.0\\
+firebase_auth=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_auth-0.6.6\\
+firebase_core=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-0.2.5+1\\
+shared_preferences=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.4.3\\

@@ -4,6 +4,7 @@ import 'package:precisometrologia_app/logic/preciso-id-logic.dart';
 import 'package:precisometrologia_app/logic/preciso-send-logic.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/preciso-mainview/preciso-model-wrappers/preciso-model-globals.dart';
+
 //---------------------------------------------------------------------------------//
 var certificadoIDFormController = TextEditingController();
 
@@ -38,13 +39,13 @@ class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader> {
     setState(() {
       certIncremental++;
       _certificadoID = getIDCertificado();
-      //_getID();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Container(
+        child: Column(
       children: <Widget>[
         Container(
             alignment: Alignment.center,
@@ -77,6 +78,6 @@ class PrecisoMainViewHeaderState extends State<PrecisoMainViewHeader> {
                   ),
                 ))),
       ],
-    );
+    ));
   }
 }
