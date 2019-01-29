@@ -3,18 +3,27 @@ import 'package:flutter/material.dart';
 import 'package:precisometrologia_app/preciso-login/preciso-login-logic.dart';
 import 'package:precisometrologia_app/preciso-mainview/cert_main.dart';
 //---------------------------------------------------------------------------------//
-
-var emailFormController = TextEditingController();
-var passwordFormController = TextEditingController();
-
-var loginKey;
-
 Pattern emailExclusionPattern =
     r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
 RegExp emailExclusionRegex = new RegExp(emailExclusionPattern);
 
-class PrecisoLoginScreen extends StatelessWidget {
+class PrecisoLoginScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => new _PrecisoLoginScreenState();
+}
+
+class _PrecisoLoginScreenState extends State<PrecisoLoginScreen> {
   var authHandler = new LoginAuth();
+  TextEditingController emailFormController = new TextEditingController();
+  TextEditingController passwordFormController = new TextEditingController();
+  final loginFormKey = new GlobalKey<FormState>();
+
+  validateAndLogin(){
+    final form = loginFormKey.currentState;
+    if (form.validate()){
+      
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +37,6 @@ class PrecisoLoginScreen extends StatelessWidget {
                 children: <Widget>[
                   Form(
                       key: loginKey,
-                      autovalidate: true,
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -85,18 +93,7 @@ class PrecisoLoginScreen extends StatelessWidget {
                             OutlineButton(
                                 color: Colors.blue,
                                 onPressed: () {
-                                  if (LoginAuth().isLoggedIn == false) {
-                                    LoginAuth().handleSignInEmail(
-                                        emailFormController.text,
-                                        passwordFormController.text);
-
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                MainCertWindow()));
-                                    emailFormController.text = "";
-                                    passwordFormController.text = "";
+                                  validateAndLogin();
                                   }
                                 },
                                 child: Container(

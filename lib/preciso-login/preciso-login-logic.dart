@@ -12,6 +12,13 @@ import 'package:precisometrologia_app/preciso-login/preciso-login-globals.dart';
 import 'package:precisometrologia_app/preciso-mainview/cert_main.dart';
 //---------------------------------------------------------------------------------//
 
+class ActiveUser {
+  String userUUID;
+  String userEmail;
+  String userPrecisoID;
+  bool userAuth;
+}
+
 Future<List<String>> getDeviceDetails() async {
     String deviceName;
     String deviceVersion;
@@ -57,17 +64,13 @@ Widget handleCurrentScreen() {
 class LoginAuth{
   final FirebaseAuth auth = FirebaseAuth.instance;
   var isLoggedIn = false;
+  ActiveUser activeUser;
   
   Future<FirebaseUser> handleSignInEmail(String email, String password) async {
     try{
     final FirebaseUser user = await auth.signInWithEmailAndPassword(email: email, password: password);
-
-    assert(user != null);
-    assert(await user.getIdToken() != null);
-
     final FirebaseUser currentUser = await auth.currentUser();
-    assert(user.uid == currentUser.uid);
-
+    
     print('signInEmail succeeded: $user');
     isLoggedIn = true;
     return user;

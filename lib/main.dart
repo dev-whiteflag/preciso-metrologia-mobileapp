@@ -35,7 +35,7 @@ class PrecisoApp extends StatelessWidget {
     return MaterialApp(
         title: "Preciso Metrologia",
         theme: ThemeData(
-          brightness: Brightness.dark,
+          brightness: Brightness.light,
           primaryColor: Colors.lightBlue[400],
           accentColor: Colors.deepPurple[400],),
         //home: LoginScreen()
