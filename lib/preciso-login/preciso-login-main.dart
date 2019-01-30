@@ -36,7 +36,7 @@ class _PrecisoLoginScreenState extends State<PrecisoLoginScreen> {
                 controller: ScrollController(),
                 children: <Widget>[
                   Form(
-                      key: loginKey,
+                      key: loginFormKey,
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[

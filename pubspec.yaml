@@ -7,7 +7,7 @@ description: Aplicativo Oficial para os Funcionários da Preciso Tecnologia.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 1.0.0+1
+version: 0.1.0+1
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -18,9 +18,11 @@ dependencies:
   firebase_auth: 0.6.6
   device_info: 0.3.0
   shared_preferences: 0.4.3
-   connectivity: 0.3.2
+  connectivity: 0.3.2
+
   flutter:
     sdk: flutter
+
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
