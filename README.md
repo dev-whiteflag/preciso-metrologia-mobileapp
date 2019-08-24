@@ -1,4 +1,4 @@
-## Preciso Metrologia - Mobile App (PMMP)
+## Preciso Metrologia - Mobile App
 # Introdução
 
 # Routing do Aplicativo
